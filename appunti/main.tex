@@ -1,6 +1,9 @@
 \documentclass{book}
 \usepackage[margin=1.5cm]{geometry}
 \usepackage{hyperref}
+\usepackage{graphicx}
+
+\graphicspath{{./img/}}
 
 \title{Sistemi Informativi 2022/2023}
 \author{Blascovich Alessio\\
@@ -51,7 +54,7 @@
             \item \textbf{Procedure:} specificano le azioni che permettono al sistema di essere il più coerente possibile con la realtà, permettono anche agli utenti di interagire con il sistema stesso.
             \item \textbf{Mezzi per il trattamento delle informazioni:} in questa categoria rietrano tutti i sistemi che rendono possibile l'acquisizione dei dati e la loro distribuzione.
     \end{itemize}
-    Un sistema informatrivo può quindi essere descritto come l'insieme dei mezzi utilizzati per implemtare dell'informatica all'interno di un'azienda.\\
+    Un sistema informativo può quindi essere descritto come l'insieme dei mezzi utilizzati per implemtare dell'informatica all'interno di un'azienda.\\
     Nei sistemi l'evoluzione è costante ed è influenzata da fattori:
     \begin{itemize}
         \item interni all'azienda, come la necessità di migliorare le prestazioni.
@@ -77,7 +80,7 @@
     I processi che tendono ad essere informatizzati solitamente sono quelli che attirano di più l'attenzione di un informatico che ne apporta continue migliorie.\\
     Infatti i sistemi informativi vengono migliorati con i seguenti fini:
     \begin{itemize}
-        \item \textbf{Sviluppo di funzioni operative:} infatti quando si pensa all'informatica ziendale si pensa subito al ridurre la mano d'opera e automatizzare delle operazioni, quindi il sistema informativo viene adottato in primo luogo per:
+        \item \textbf{Sviluppo di funzioni operative:} infatti quinformatriando si pensa all'informatica ziendale si pensa subito al ridurre la mano d'opera e automatizzare delle operazioni, quindi il sistema informativo viene adottato in primo luogo per:
         \begin{itemize}
             \item Ridurre il costo del lavoro in favore di procedure automatiche standardizzate.
             \item Migliorare i processi rendendoli più controllati e omologati.
@@ -129,4 +132,81 @@
     \subsubsection{Organizzazione esterna}
     Le aziende hanno iniziato ad adottare la pratica della \emph{terziarizzazione} in cui aziende medio-grandi delegano ad aziende specializzate o a loro succursali alcune parti della lavorazione.\\
     Si inizia così a formarsi una struttura reticolare con un nucleo necessario a mantenere il controllo di una rete di partner o di succursali.
+
+    \chapter{Struttura dell'azienda e del suo sistema informativo}
+    \section{Concetto di esigenza informativa}
+    La funzione principale di un sistema informativo è di interagire, aiutandi, ogni figura professionale che fa funzionare l'azienda.\\
+    E' importante fare due distinzioni di ruoli:
+    \begin{enumerate}
+        \item \textbf{Esecutivo}
+        \item \textbf{Direttivo}
+    \end{enumerate}
+    Queste due tipologie di ruoli hanno bisogno di informazioni diverse e quindi le informazioni verranno date in modo meno o più astratto.
+    \begin{itemize}
+        \item I ruoli esecutivi avranno bisogno di informazioni molto specifiche della situazione attuale.
+        \item I ruoli dirigenziali invece avranno a disposizione dei dati che forniscono una visione molto più ampia ma sono più sintetici.
+    \end{itemize}
+    All'interno del sistema informativo aziendale devono quindi coesistere i dettagli richiesti dai ruoli operativi e la sintesi richiesta dai dirigenti.
+
+    \subsection{Schema di Anthony}
+    Come abbiamo visto cambiando di mansione cambiano anche i dati che risultano utili.\\
+    Ma come si può identificare a che dipendenti vanno fornite certe informazioni?\\
+    Il modello di Anthony propone di distinguere le mansioni in tre livelli, ogni livello interagisce con gli adiacenti mediante cicli di verifica delle informazioni.
+    \begin{enumerate}
+        \item \textbf{Direzionale strategico:} identifica gli obiettivi principali a medio-lungo termine.
+        \item \textbf{Direzionale tattico:} che compie analisi economiche ponendo obbiettivi a medio termine, inoltre fornisce gli indirizzi operativi ai settori esecutivi.
+        \item \textbf{Operativo:} attua i piani definiti.
+    \end{enumerate}
+    \begin{center}
+        \includegraphics[scale=0.5]{anthony_mark_01.jpg}
+    \end{center}
+
+    \subsection{Profili informativi}
+    \subsubsection{Livello direzionale strategico}
+    A questo livello competono informazioni sintetiche, molto diversificate e poco strutturate.\\
+    Al decisore deve essere affiancato un sistema informativo in grado di mostrare:
+    \begin{itemize}
+        \item indicatori prestazionali dell'azienda.
+        \item evoluzioni delle strategie adottate in precedenza.
+        \item scenari fittizzi per simulazioni.
+        \item ogni tipo di indicatore sulla salute dell'azienda.
+    \end{itemize}
+
+    \subsubsection{Livello direzionale tattico}
+    Il livello tattico si occupa di tutte quelle attività di definizione di obbiettivi a breve termine che rispettino le strategie aziendali e il periodico controllo dei risultati.\\
+    Le informazioni necessarie sono ottenute sintetizzando i dati estratti dai sistemi di supporto al livello operativo.
+
+    \subsubsection{Livello operativo}
+    In questo livello ci si occupa dell'attuazione dei piani e delle attività correlate.
+
+    \subsubsection{Tabella riassuntiva}
+    \begin{center}
+        \begin{tabular}{|l|c|c|c|c|}
+            \hline
+            & \textbf{Frequenza} & \textbf{Dati} & \textbf{Provenienza} & \textbf{Volumi}\\
+            \hline
+            \textbf{\begin{tabular}{@{}c@{}} Livello \\ direzionale \\ strategico \end{tabular}} & casuale & \begin{tabular}{@{}c@{}} sintetici e\\ non strutturati \end{tabular} & interna ed esterna & bassi\\
+            \hline
+            \textbf{\begin{tabular}{@{}c@{}} Livello \\ direzionale \\ tattico \end{tabular}} & prefissata & sintetici o analitici & interna & medi\\
+            \hline
+            \textbf{\begin{tabular}{@{}c@{}} Livello \\ operativo \end{tabular}} & costante & analitici & interna & elevati\\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    \section{Scomposizione del sistema informativo}
+    Le diverse esigenze tra i  vari livelli ha portato, nel tempo, ad una separazione tra i sistemi informativi.\\
+    Si sono venuti a creare due tipologie di sistemi:
+    \begin{enumerate}
+        \item \textbf{Sistemi informazionali:} che aiutano nella risoluzione di problemi che non sempre hanno una struttura precisa, vengono alimentati con i dati raccolti dai sistemi operazionali.\\
+            Negli anni si sono evoluti per collezioanre in modo sempre più rapido ed efficente l'andamento azziendale e quello della concorrenza.
+        \item \textbf{Sistemi operazionali:} hanno una strattura fissa e molto rigida, infatti svolgono il mestiere per il quale vengono pensati, non sono più di aiuto quando si voglia percorrere un percorso di risoluzione diverso.
+    \end{enumerate}
+    \begin{center}
+        \includegraphics[scale=0.6]{relazione_sistemi_operazionale_informazionale.png}
+    \end{center}
+    Questa separazione rompe però la struttura di Anthony che può essere riopensata come:
+    \begin{center}
+        \includegraphics[scale=0.5]{anthony_mark_02.png}
+    \end{center}
 \end{document}
