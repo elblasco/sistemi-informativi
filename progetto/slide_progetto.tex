@@ -1,0 +1,60 @@
+\documentclass{beamer}
+\usepackage{hyperref}
+\newcommand{\credit}[1]{\par\hfill \footnotesize Fonte:~\itshape#1}
+
+\usetheme{AnnArbor}
+\usecolortheme{orchid}
+\title{ERP: L'area logistica}
+\author{Blascovich Alessio, Piero Fontanive}
+\date{}
+
+\begin{document}
+    \begin{frame}
+        \titlepage
+    \end{frame}
+
+    \section{Obbiettivi}
+    \begin{frame}{Obbiettivi}
+        La parte di sistema informativo rivolto alla logistica si occupa di:
+        \begin{itemize}
+            \item Tenere traccia del movimento della merce.\\
+                \textit{Fornisce anche API per tracciare il pacco dall'esterno come i vari corrieri espresso.}
+            \item Fornire dati analitici sulla merca.\\
+                \textit{E' possibile fare un resoconto sulla disponibilità è la giacenza degli articoli.}
+            \item Effettuare previsioni sullo stato dell'inventario.\\
+                \textit{Dopo il black friday avrò bisogno di ordinare x unità di articolo 1 e y unità di articolo 2.}
+        \end{itemize}
+    \end{frame}
+
+    \subsection{Evoluzione obbiettivi}
+    \begin{frame}{Evoluzione obbiettivi}
+        Nei sistemi più grandi ed evoluti è possibile compiere funzioni per:
+        \begin{itemize}
+            \item Localizzare a livello fisico l'ubicazione di un articolo.
+            \item Tracciare origine e destinazione di un lotto di articoli o di un singola tipologia di articoli usandone la marticola.
+            \item Muovere parzialmente o totalmente la merce in automatico.\\
+                ome viene fatto nei magazzini di alcune multinazionali, un esempio può essere \href{https://www.youtube.com/watch?v=YL9XjyXsKKk}{questo}.
+        \end{itemize}
+    \end{frame}
+
+    \section{Strutture di base}
+    \begin{frame}{Strutture di base}
+        La logistica si avvale di tre strutture base:
+        \begin{enumerate}
+            \item L'anagrafica degli articoli, ovvero la descrizione dei prodotti che un'azienda gestisce.
+            \item La compisizione fisica e logica del magazzino dove si andrà ad operare.
+            \item La movimentazione degli articoli, ovvero la rappresentazione dei movimenti compiuti.
+        \end{enumerate}
+    \end{frame}
+
+    \subsection{Nominazione articoli}
+    \begin{frame}{Intro -  Nominazione articoli}
+        Un problema fondamentale è la standardizzazione nella nomenclatura della merce all'interno di un azienda.\\
+        E' necessario trovare metodi di nomenclatura che creaino meno \textbf{omocodia} possibile e che siano facilmente leggibili.\\
+        \vspace{1.5em}
+        \textbf{E.g.}\\
+        Una numerazione progressiva è facile da implementare ma crea difficoltà nella correlazione numero -$>$ prodotto.\\
+        Il codice fiscale crea omocodie, nel 2015 erano presenti 35800 casi di persone vive con codici uguali.
+        \credit{\href{https://www.agenziaentrate.gov.it/portale/documents/20143/318757/Audizione+del+Direttore+dell+Agenzia+delle+Entrate+10+02+2016_Audizione+-+Codice+Fiscale+e+Omocodie+-+10+feb+2016+df.pdf/202e5395-f622-62e5-219a-7ce894d538a4}{Agenzia delle entrate}} 
+    \end{frame}
+\end{document}
