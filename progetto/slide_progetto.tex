@@ -1,11 +1,14 @@
 \documentclass{beamer}
 \usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{{./img/}}
 \newcommand{\credit}[1]{\par\hfill \footnotesize Fonte:~\itshape#1}
 
 \usetheme{AnnArbor}
 \usecolortheme{orchid}
 \title{ERP: L'area logistica}
-\author{Blascovich Alessio, Piero Fontanive}
+\author{Blascovich Alessio, Fontanive Piero}
 \date{}
 
 \begin{document}
@@ -48,13 +51,113 @@
     \end{frame}
 
     \subsection{Nominazione articoli}
-    \begin{frame}{Intro -  Nominazione articoli}
+    \begin{frame}{Nominazione articoli -  Intro}
         Un problema fondamentale è la standardizzazione nella nomenclatura della merce all'interno di un azienda.\\
         E' necessario trovare metodi di nomenclatura che creaino meno \textbf{omocodia} possibile e che siano facilmente leggibili.\\
         \vspace{1.5em}
         \textbf{E.g.}\\
         Una numerazione progressiva è facile da implementare ma crea difficoltà nella correlazione numero -$>$ prodotto.\\
         Il codice fiscale crea omocodie, nel 2015 erano presenti 35800 casi di persone vive con codici uguali.
-        \credit{\href{https://www.agenziaentrate.gov.it/portale/documents/20143/318757/Audizione+del+Direttore+dell+Agenzia+delle+Entrate+10+02+2016_Audizione+-+Codice+Fiscale+e+Omocodie+-+10+feb+2016+df.pdf/202e5395-f622-62e5-219a-7ce894d538a4}{Agenzia delle entrate}} 
+        \credit{\href{https://www.agenziaentrate.gov.it/portale/documents/20143/318757/Audizione+del+Direttore+dell+Agenzia+delle+Entrate+10+02+2016_Audizione+-+Codice+Fiscale+e+Omocodie+-+10+feb+2016+df.pdf/202e5395-f622-62e5-219a-7ce894d538a4}{Agenzia delle entrate}}
+    \end{frame}
+
+    \begin{frame}{Nominazione articoli - Piano di codifica}
+        Per evitare i problemi visti prima si ricorre ad un \textbf{piano di codifica}, ovvero il processo che permette di definire un nome univoco.\\
+        Per la definizione del nome si usano prevalentemente due sistemi a codifica:
+        \begin{enumerate}
+            \item lineare
+            \item condizionata
+        \end{enumerate}
+    \end{frame}
+
+    \subsection{Codifiche lineari e condizionali}
+    \begin{frame}{Nominazione articoli - Codifiche lineari e condizionali}
+        \begin{enumerate}
+            \item \textbf{Codifica lineare:} viene scelto un insieme di caratteri che identifichi ogni articolo tramite una stringa, tipicamente lunga dai 15 ai 20 caratteri.\\
+                Le stringhe vengono generate facendo un intersezione tra tutte le caratteristiche scelte, ogni intersezione tra tutte le caratteristiche deve avere al ppiù un elemento.
+            \item \textbf{Codifica condizionale:} non viene usata una semplice concatenazione di lunghezza fissa ma di scegliere ad ogni passaggio la parte del codice in base al codice già scelto nelle fasi precedenti. 
+        \end{enumerate}
+    \end{frame}
+
+    \subsection{Esempio}
+    \begin{frame}{Nominazione articoli - Esempio}
+        Un'azienda prodice sedie e tavoli, (MO) modello sedia, (AS) altezza sedia, (AC) altezza schienale, (MF) materiale del fusto, (MT) modello tavolo, (DP) dimensione del piano, (MP) materiale del piano, (MG) materiale delle gambe \dots\\
+        Infine un atributo (TP) che assume i valori S per le sedie e T per i tavoli.\\
+        \begin{itemize}
+            \item \textbf{Sedia:} TP+MO+AS+AC+MF+\dots
+            \item \textbf{Tavolo:} TP+MT+DP+MP+MG+\dots
+        \end{itemize}
+        Questo però porta (nei casi più complessi) ad avere codici molto lunghi ma molto simili tra di loro, è bene quindi creare degli alias.\\
+        \textbf{E.g.}\\
+        \begin{itemize}
+            \item \color{red}{Luxury01}
+            \item \color{blue}{Luxury02}
+        \end{itemize}
+    \end{frame}
+
+    \subsection{Codifiche parlanti e strutturate}
+    \begin{frame}{Nominazione articoli - Codifiche parlanti e strutturate}
+        L'ultima decisione da prendere è scegliere la codifica nella quale verranno prodotti i codici di identificazine.\\
+        Si presentano quindi, due scelte:
+        \begin{enumerate}
+            \item \textbf{Parlante:} questo tipo di codifica rende possibile all'utente di capire le caratteristiche dell'oggetto guardando solo il codice.
+            \item \textbf{Strutturata:} questa codifica rende il codice più compatto, ma meno leggibile dall'utente.
+        \end{enumerate}
+        \textbf{E.g.}\\
+        Facendo riferimento alla voce (MF) del materiale del fusto di una sedia.
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                \textbf{Materiale} & \textbf{Codice parlante} & \textbf{Codice strutturato}\\
+                \hline
+                Ciliegio & CIL & 0\\
+                \hline
+                Fagio & FAG & 1\\
+                \hline
+            \end{tabular}
+        \end{center}
+    \end{frame}
+
+    \section{Anagrafiche dei prodotti}
+    \begin{frame}{Anagrafiche dei prodotti}
+        I sistemi informativi ragruppano in queste "anagrafiche" le principali informazioni necessarie al trattamento del articolo.\\
+        Queste informazioni sono:
+        \begin{itemize}
+            \item Il codice dell'articolo, che identifica univocamente l'oggetto.
+            \item Descrizione articolo, che in alcuni sistemi è formata in modo automatico partendo dal codice strutturato.
+            \item Unità di misura, per quanto strano possa sembrare non è inusuale che un prodotto venga fabbricato in un unità di misura (kilogrammi) e venduto in un'altra (unità).
+            \item Imballaggio e confezione.
+             
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Anagrafiche dei prodotti}
+        \begin{itemize}
+            \item Approvigionamento ovvero se un articolo viene acquistato oppure prodotto internamente.
+            \item Politica di gestione, le più comuni forme sono \textit{a scorta} e \textit{a fabisogno}.
+            \item Movimentazione che indica se l'articolo è fisico oppure se è presente per pure informazioni di anagrafica.
+            \item Stato:
+            \begin{itemize}
+                \item In esaurimento.
+                \item Esaurito.
+            \end{itemize}
+            \item Scheda tecnica, è possibile associare ad un articolo dei file descrittivi come immagini, progetti CAD \dots
+        \end{itemize}
+    \end{frame}
+
+    \subsection{Informazioni di approvigionamento e produttive}
+    \begin{frame}{Anagrafiche dei prodotti - Informazioni di approvigionamento e produttive}
+        Gli ERP contengono anche informazioni per quanto riguarda gli acquisi, la varietà di queste informazioni varia da contesto a contesto ma generalmente sono sempre presenti:
+        \begin{itemize}
+            \item Lead time, il tempo che impiega la merce ad arrivare.
+            \item Scorta minima che rappresenta la quantità che serve a far fronte a picchi di ordini.
+            \item Livello di riordino ovvero la quantità che serve a far fronte ad un lungo periodo come il lead time.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Anagrafiche dei prodotti - Informazioni di approvigionamento e produttive}
+        \begin{center}
+            \includegraphics[scale=0.5]{livello_di_riordino.png}
+        \end{center}
     \end{frame}
 \end{document}
