@@ -4,11 +4,8 @@
 \usepackage{graphicx}
 
 \newcommand{\credit}[1]{\par\hfill \footnotesize Fonte:~\itshape#1}
+\newcommand{\link}[2]{\color{blue}{\underline{\href{#1}{#2}}}}
 
-\hypersetup{
-    colorlinks = true,
-    urlcolor = cyan
-}
 \graphicspath{{./img/}}
 
 \usetheme{AnnArbor}
@@ -42,7 +39,7 @@
         \item Localizzare a livello fisico l'ubicazione di un articolo.
         \item Tracciare origine e destinazione di un lotto di articoli o di un singola tipologia di articoli usandone la marticola.
         \item Muovere parzialmente o totalmente la merce in automatico.\\
-            ome viene fatto nei magazzini di alcune multinazionali, un esempio può essere \href{https://www.youtube.com/watch?v=YL9XjyXsKKk}{questo}.
+            ome viene fatto nei magazzini di alcune multinazionali, un esempio può essere \link{https://www.youtube.com/watch?v=YL9XjyXsKKk}{questo}.
     \end{itemize}
 \end{frame}
 
@@ -64,7 +61,7 @@
     \textbf{E.g.}\\
     Una numerazione progressiva è facile da implementare ma crea difficoltà nella correlazione numero -$>$ prodotto.\\
     Il codice fiscale crea omocodie, nel 2015 erano presenti 35800 casi di persone vive con codici uguali.
-    \credit{\href{https://www.agenziaentrate.gov.it/portale/documents/20143/318757/Audizione+del+Direttore+dell+Agenzia+delle+Entrate+10+02+2016_Audizione+-+Codice+Fiscale+e+Omocodie+-+10+feb+2016+df.pdf/202e5395-f622-62e5-219a-7ce894d538a4}{Agenzia delle entrate}}
+    \credit{\link{https://www.agenziaentrate.gov.it/portale/documents/20143/318757/Audizione+del+Direttore+dell+Agenzia+delle+Entrate+10+02+2016_Audizione+-+Codice+Fiscale+e+Omocodie+-+10+feb+2016+df.pdf/202e5395-f622-62e5-219a-7ce894d538a4}{Agenzia delle entrate}}
 \end{frame}
 
 \begin{frame}{Nominazione articoli - Piano di codifica}
@@ -124,7 +121,7 @@
     \end{center}
 \end{frame}
 
-\section{Anagrafiche dei prodotti}
+\subsection{Anagrafiche dei prodotti}
 \begin{frame}{Anagrafiche dei prodotti}
     I sistemi informativi ragruppano in queste "anagrafiche" le principali informazioni necessarie al trattamento del articolo.\\
     Queste informazioni sono:
@@ -164,6 +161,39 @@
     \begin{center}
         \includegraphics[scale=0.5]{livello_di_riordino.png}
     \end{center}
+\end{frame}
+
+\subsection{Informazioni da contenere}
+\begin{frame}{Anagrafiche dei prodotti - Informazioni da contenere}
+    Ogni articolo deve contenere alcune informazioni di base come:
+    \begin{itemize}
+        \item Info sul fornitore dell'articolo.
+        \begin{itemize}
+            \item Nome fornitore.
+            \item Lead time.
+            \item Lotto minimo ordinabile.
+        \end{itemize}
+        \item Informazioni sui clienti che vanno ad acquistare l'articolo.
+        \begin{itemize}
+            \item Nome cliente.
+            \item Descrizione personalizzata dal cliente.
+            \item Imballaggio personalizzato.
+            \item Etichettature specifiche.
+        \end{itemize}
+        \item I dati economici sull'articolo.
+        \begin{itemize}
+            \item Aliquota IVA.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\subsection{Layout aziendale}
+\begin{frame}{Layout aziendale}
+    Solitamente il layout di un'azienda arriva ad essere molto complesso e vasto, diamo quindi due definizioni:
+    \begin{itemize}
+        \item \textbf{Deposito:} l'ubicazione fisica in cui sono presenti gli articoli.
+        \item \textbf{Magazzino:} l'insieme di tutti i deposizi di un'azienda.
+    \end{itemize}
 \end{frame}
 
 \section{Flussi evoluti}
