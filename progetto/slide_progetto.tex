@@ -2,8 +2,14 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{graphicx}
-\graphicspath{{./img/}}
+
 \newcommand{\credit}[1]{\par\hfill \footnotesize Fonte:~\itshape#1}
+
+\hypersetup{
+    colorlinks = true,
+    urlcolor = cyan
+}
+\graphicspath{{./img/}}
 
 \usetheme{AnnArbor}
 \usecolortheme{orchid}
@@ -21,11 +27,11 @@
     La parte di sistema informativo rivolto alla logistica si occupa di:
     \begin{itemize}
         \item Tenere traccia del movimento della merce.\\
-              \textit{Fornisce anche API per tracciare il pacco dall'esterno come i vari corrieri espresso.}
+            \textit{Fornisce anche API per tracciare il pacco dall'esterno come i vari corrieri espresso.}
         \item Fornire dati analitici sulla merca.\\
-              \textit{E' possibile fare un resoconto sulla disponibilità è la giacenza degli articoli.}
+            \textit{E' possibile fare un resoconto sulla disponibilità è la giacenza degli articoli.}
         \item Effettuare previsioni sullo stato dell'inventario.\\
-              \textit{Dopo il black friday avrò bisogno di ordinare x unità di articolo 1 e y unità di articolo 2.}
+            \textit{Dopo il black friday avrò bisogno di ordinare x unità di articolo 1 e y unità di articolo 2.}
     \end{itemize}
 \end{frame}
 
@@ -36,7 +42,7 @@
         \item Localizzare a livello fisico l'ubicazione di un articolo.
         \item Tracciare origine e destinazione di un lotto di articoli o di un singola tipologia di articoli usandone la marticola.
         \item Muovere parzialmente o totalmente la merce in automatico.\\
-              ome viene fatto nei magazzini di alcune multinazionali, un esempio può essere \href{https://www.youtube.com/watch?v=YL9XjyXsKKk}{questo}.
+            ome viene fatto nei magazzini di alcune multinazionali, un esempio può essere \href{https://www.youtube.com/watch?v=YL9XjyXsKKk}{questo}.
     \end{itemize}
 \end{frame}
 
@@ -74,7 +80,7 @@
 \begin{frame}{Nominazione articoli - Codifiche lineari e condizionali}
     \begin{enumerate}
         \item \textbf{Codifica lineare:} viene scelto un insieme di caratteri che identifichi ogni articolo tramite una stringa, tipicamente lunga dai 15 ai 20 caratteri.\\
-              Le stringhe vengono generate facendo un intersezione tra tutte le caratteristiche scelte, ogni intersezione tra tutte le caratteristiche deve avere al ppiù un elemento.
+            Le stringhe vengono generate facendo un intersezione tra tutte le caratteristiche scelte, ogni intersezione tra tutte le caratteristiche deve avere al ppiù un elemento.
         \item \textbf{Codifica condizionale:} non viene usata una semplice concatenazione di lunghezza fissa ma di scegliere ad ogni passaggio la parte del codice in base al codice già scelto nelle fasi precedenti.
     \end{enumerate}
 \end{frame}
@@ -127,7 +133,6 @@
         \item Descrizione articolo, che in alcuni sistemi è formata in modo automatico partendo dal codice strutturato.
         \item Unità di misura, per quanto strano possa sembrare non è inusuale che un prodotto venga fabbricato in un unità di misura (kilogrammi) e venduto in un'altra (unità).
         \item Imballaggio e confezione.
-
     \end{itemize}
 \end{frame}
 
@@ -137,10 +142,10 @@
         \item Politica di gestione, le più comuni forme sono \textit{a scorta} e \textit{a fabisogno}.
         \item Movimentazione che indica se l'articolo è fisico oppure se è presente per pure informazioni di anagrafica.
         \item Stato:
-              \begin{itemize}
-                  \item In esaurimento.
-                  \item Esaurito.
-              \end{itemize}
+            \begin{itemize}
+                \item In esaurimento.
+                \item Esaurito.
+            \end{itemize}
         \item Scheda tecnica, è possibile associare ad un articolo dei file descrittivi come immagini, progetti CAD \dots
     \end{itemize}
 \end{frame}
@@ -155,15 +160,16 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Anagrafiche dei prodotti - Informazioni di approvigionamento e peni}
+\begin{frame}{Anagrafiche dei prodotti - Informazioni di approvigionamento e produttive}
     \begin{center}
+        \includegraphics[scale=0.5]{livello_di_riordino.png}
     \end{center}
 \end{frame}
 
 \section{Flussi evoluti}
 \begin{frame}{Flussi evoluti}
     I sistemi informativi evoluti offrono molte altre funzioni per un trattamento adeguato della logistica.\\
-    Spesso, quando la complessità è elevata o i processi sono molto verticali, l’ERP lascia il posto a sottosistemi di logistica mirati, che interfacciano la strumentazione di campo (quali, per esempio, lettori di codici a barre) per facilitare il tracciamento delle operazioni. Nel seguito descriveremo sommariamente i seguenti temi, gestiti dai principali sistemi ERP:\\
+    Spesso, quando la complessità è elevata o i processi sono molto verticali, l'ERP lascia il posto a sottosistemi di logistica mirati, che interfacciano la strumentazione di campo (quali, per esempio, lettori di codici a barre) per facilitare il tracciamento delle operazioni. Nel seguito descriveremo sommariamente i seguenti temi, gestiti dai principali sistemi ERP:\\
     \begin{itemize}
         \item \textbf{Lotti}
         \item \textbf{Matricole}
@@ -176,7 +182,7 @@
     Quando la logistica è gestita in parte o interamente a lotti, si desidera tracciare un insieme di informazioni comuni proprie di un particolare gruppo di oggetti “articolo”, che si differenziano da quelle di un altro gruppo del medesimo articolo.\\
     \vspace{1.5em}
     \textbf{E.g.}\\
-    Si consideri, per esempio, il processo produttivo di un medicinale. In una determinata giornata le confezioni di medicinale prodotte sono associate a un particolare lotto di produzione, che ha una sua data di scadenza; il giorno successivo si ha un altro lotto dello stesso medicinale, con un’altra data di scadenza.
+    Si consideri, per esempio, il processo produttivo di un medicinale. In una determinata giornata le confezioni di medicinale prodotte sono associate a un particolare lotto di produzione, che ha una sua data di scadenza; il giorno successivo si ha un altro lotto dello stesso medicinale, con un'altra data di scadenza.
 \end{frame}
 
 \begin{frame}{Magazzino a Lotti - Strutture di riferimento}
@@ -227,7 +233,7 @@
 \end{frame}
 
 \begin{frame}{Magazzino a Lotti - Procedure di alimentazione}
-    Le procedure di alimentazione prevedono che in tutti i punti in cui c’è una movimentazione di magazzino vengano o richiesti o calcolati automaticamente i lotti di riferimento.
+    Le procedure di alimentazione prevedono che in tutti i punti in cui c'è una movimentazione di magazzino vengano o richiesti o calcolati automaticamente i lotti di riferimento.
     \begin{itemize}
         \item \textbf{Ricezione materiali}: creazione dei lotti (punto sorgente);
         \item \textbf{Spedizione materiali}: chiusura totale o parziale dei lotti (punto terminazione);
