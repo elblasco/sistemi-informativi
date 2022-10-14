@@ -291,8 +291,63 @@
 \begin{frame}{Magazzino a Matricole}
     \begin{itemize}
         \item Numeri di serie;
+        \begin{itemize}
+            \item intervalli di numeri collegati a insiemi di oggetti “articolo”, che sono trattati con singoli lotti
+        \end{itemize}
         \item Numeri di matricole;
+        \begin{itemize}
+            \item vengono utilizzate per prodotti costruiti su specifiche del cliente, non di serie
+            \item vengono utilizzate per nominare in maniera esplicita un articolo preciso (la tracciabilità non è un problema)
+        \end{itemize}
+        \item \textbf{E.g.} si produce un lotto 2018-PR-0023 di A con numeri di serie da A-00001 a A-00950
     \end{itemize}
+    \vspace{1.5em}
+    \textbf{Le strutture di riferimento, le funzioni operative e le funzioni di controllo sono analoghe ai lotti.}
+\end{frame}
+
+\subsection{Magazzino a Celle}
+\begin{frame}{Magazzino a Celle}
+    Si parla di magazzino a celle invece quando l'ubicazione è dinamica, quindi può cambiare nel tempo, e multipla, quindi elementi di un dato articolo possono trovarsi contemporaneamente in punti diversi del deposito.\\
+    \vspace{1.5em}
+    Un'azienda che tratta un proprio magazzino a celle lo suddivide in sottoaree destinate a ospitare gli articoli. Le aree sono di solito identificate da coordinate, per cui a volte si parla anche di magazzino a coordinate\\
+    \vspace{1.5em}
+    \textbf{E.g.} per esempio corridoio, lato del corridoio, numero di scaffale e piano dello scaffale.
+\end{frame}
+
+\begin{frame}{Magazzino a Celle - Strutture di riferimento}
+    Il modello fisico del magazzino a celle è rappresentato sul sistema informativo da un insieme di coordinate spaziali che definiscono l’effettiva posizione di ciascuna cella.\\
+    \vspace{1.5em}
+    \textbf{E.g.} Corsia, Lato destro/sinistro, Scaffale, Piano; istanziando i valori si potrebbe avere 14-S-7-3 (corsia n. 14, lato sinistro, scaffale n. 7, terzo piano).
+    \vspace{1.5em}
+\end{frame}
+
+\begin{frame}{Magazzino a Celle - Strutture di riferimento}
+    Ogni cella è poi descritta da un insieme di caratteristiche. Le informazioni più comuni sono:
+    \begin{itemize}
+        \item coordinate spaziali;
+        \item lunghezza/altezza/larghezza;
+        \item peso massimo;
+        \item temperatura minima/massima;
+        \item umidità minima/massima;
+        \item indice difficoltà di accesso:
+        \begin{itemize}
+            \item \textbf{E.g.} indica se la cella è accessibile con un muletto per il trasporto di pallet o meno
+        \end{itemize}
+        \item compatibilità: identifica le classi di articoli compatibili
+        \begin{itemize}
+            \item \textbf{E.g.} in una cella frigorifera si ospitano carni fresche, non inscatolate
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\subsection{Magazzino Automatico}
+\begin{frame}{Magazzino Automatico}
+    I magazzini automatici sono gestiti da sistemi specialistici che interagiscono con la parte logistica di un sistema ERP.\\
+    \begin{itemize}
+        \item In questi magazzini un articolo viene depositato in maniera automatica in una precisa locazione fissa o variabile se si opera con una logica di celle.
+        \item Analogamente, il prelievo di un articolo (e quindi anche di una sequenza) è completamente automatizzato.
+    \end{itemize}
+    In versioni leggermente semplificate il carico è manuale e solo il prelievo, pilotato da un’opportuna lista di picking, è automatico.
 \end{frame}
 
 \end{document}
