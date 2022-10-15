@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 
 \newcommand{\credit}[1]{\par\hfill \footnotesize Fonte:~\itshape#1}
+\newcommand{\esempio}[1]{\par\hfill \footnotesize Esempio:~\itshape#1}
 \newcommand{\link}[2]{\color{blue}{\underline{\href{#1}{#2}}}}
 
 \graphicspath{{./img/}}
@@ -38,9 +39,9 @@
     \begin{itemize}
         \item Localizzare a livello fisico l'ubicazione di un articolo.
         \item Tracciare origine e destinazione di un lotto di articoli o di un singola tipologia di articoli usandone la marticola.
-        \item Muovere parzialmente o totalmente la merce in automatico.\\
-            ome viene fatto nei magazzini di alcune multinazionali, un esempio può essere \link{https://www.youtube.com/watch?v=YL9XjyXsKKk}{questo}.
+        \item Muovere parzialmente o totalmente la merce in automatico, come viene fatto nei magazzini di alcune grandi aziende.
     \end{itemize}
+    \esempio{\link{https://lcsgroup.it/soluzioni/magazzini-automatici/}{LCS costruzione di magazzini automatici}}
 \end{frame}
 
 \section{Strutture di base}
@@ -187,6 +188,14 @@
     \end{itemize}
 \end{frame}
 
+\subsection{Esempio}
+\begin{frame}{Esempio}
+    \begin{center}
+        \includegraphics[scale=0.2]{Mexal.jpg}
+    \end{center}
+    \esempio{\link{https://www.passepartout.net/software/imprese}{Passepartout Mexal}}
+\end{frame}
+
 \subsection{Layout aziendale}
 \begin{frame}{Layout aziendale}
     Solitamente il layout di un'azienda arriva ad essere molto complesso e vasto, diamo quindi due definizioni:
@@ -229,6 +238,34 @@
         \item Automatiche dai flussi operativi.
         \item Automatiche dai flusi di verifica.
     \end{itemize}
+\end{frame}
+
+\subsection{Procedure di alimentazione interattive}
+\begin{frame}{Procedure di base - Procedure di alimentazione interattive}
+    Queste procedure di alimentazione si dividono in due categorie:
+    \begin{enumerate}
+        \item \textbf{Simmetriche:} in cui i dati comuni di entrata e uscita di una articolo vengono inseriti solo una volta, mentre vengono inseriti due volte i dati disgiunti.
+        \item \textbf{Complesse:} nelle quali ad ognmi movimento ne sono associati altri.
+    \end{enumerate}
+\end{frame}
+
+\subsection{Procedure di alimentazione automatiche dai flussi operativi}
+\begin{frame}{Procedure di base - Procedure di alimentazione automatiche dai flussi operativi}
+    La maggior parte dei movimenti de magazzino vengono generati dai flussi operativi.
+    \begin{itemize}
+        \item \textbf{Ingresso/uscita merci:} vengono generati in automatico i movimenti di uscita in base ai documenti di trasporto per la vendita.\\
+            Mentre, per simmetria, il flusso di acquisti genera i movimenti in ingresso in base al documento di trasporto del venditore.
+        \item \textbf{Denuncia/prelievo di produzione:} per generare i movimenti ci si basa sul processo produttivo, vengono scaricati i materiali utilizzati (prelievo per produzione) e vengono caricati gli articoli prodotti (denuncia di produzione).
+    \end{itemize}
+    Appare facile vedere che più le dimensioni dell'azienda crescono, più aumenta il numero di eventi interni e quindi la probabilità di compiere errori.
+\end{frame}
+
+\subsection{Procedure di alimentazione automatiche dai flussi di verifica}
+\begin{frame}{Procedure di base - Procedure di alimentazione automatiche dai flussi di verifica}
+    Per ovviare ai possibili errori i sistemi informativi offrono varie procedure di verifica delle giacenze.\\
+    Queste procedure mappano i risultati degli \textit{inventari a rotazione}, in questa tipologia di inventari si divide il magazino in sezioni delle quali si fa il conteggio fisico a rotazione.\\
+    I dati ottenuti dal congteggio vengono inseriti nel sistema informativo, il processo di inserimento può essere reso più semplice e veloce dalla tecnologia, per esempio usando delle etichtte RFID (IoT) che comunicano al sistema la loro presenza.
+    \esempio{\link{https://internetretailing.net/magazine-article/case-study-decathlon-getting-smart-with-rfid-tags/}{Decathlon usa gli RFID}}
 \end{frame}
 
 \section{Flussi evoluti}
