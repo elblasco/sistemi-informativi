@@ -26,8 +26,8 @@
     \begin{itemize}
         \item Tenere traccia del movimento della merce.\\
             \textit{Fornisce anche API per tracciare il pacco dall'esterno come i vari corrieri espresso.}
-        \item Fornire dati analitici sulla merca.\\
-            \textit{E' possibile fare un resoconto sulla disponibilità è la giacenza degli articoli.}
+        \item Fornire dati analitici sulla merce.\\
+            \textit{E' possibile fare un resoconto sulla disponibilità e la giacenza degli articoli.}
         \item Effettuare previsioni sullo stato dell'inventario.\\
             \textit{Dopo il black friday avrò bisogno di ordinare x unità di articolo 1 e y unità di articolo 2.}
     \end{itemize}
@@ -49,7 +49,7 @@
     La logistica si avvale di tre strutture base:
     \begin{enumerate}
         \item L'anagrafica degli articoli, ovvero la descrizione dei prodotti che un'azienda gestisce.
-        \item La compisizione fisica e logica del magazzino dove si andrà ad operare.
+        \item La composizione fisica e logica del magazzino dove si andrà ad operare.
         \item La movimentazione degli articoli, ovvero la rappresentazione dei movimenti compiuti.
     \end{enumerate}
 \end{frame}
@@ -57,7 +57,7 @@
 \subsection{Nominazione articoli}
 \begin{frame}{Nominazione articoli -  Intro}
     Un problema fondamentale è la standardizzazione nella nomenclatura della merce all'interno di un azienda.\\
-    E' necessario trovare metodi di nomenclatura che creaino meno \textbf{omocodia} possibile e che siano facilmente leggibili.\\
+    E' necessario trovare metodi di nomenclatura che creino meno \textbf{omocodia} possibile e che siano facilmente leggibili.\\
     \vspace{1.5em}
     \textbf{E.g.}\\
     Una numerazione progressiva è facile da implementare ma crea difficoltà nella correlazione numero -$>$ prodotto.\\
@@ -78,7 +78,7 @@
 \begin{frame}{Nominazione articoli - Codifiche lineari e condizionali}
     \begin{enumerate}
         \item \textbf{Codifica lineare:} viene scelto un insieme di caratteri che identifichi ogni articolo tramite una stringa, tipicamente lunga dai 15 ai 20 caratteri.\\
-            Le stringhe vengono generate facendo un intersezione tra tutte le caratteristiche scelte, ogni intersezione tra tutte le caratteristiche deve avere al ppiù un elemento.
+            Le stringhe vengono generate facendo un intersezione tra tutte le caratteristiche scelte, ogni intersezione tra tutte le caratteristiche deve avere al più un elemento.
         \item \textbf{Codifica condizionale:} non viene usata una semplice concatenazione di lunghezza fissa ma di scegliere ad ogni passaggio la parte del codice in base al codice già scelto nelle fasi precedenti.
     \end{enumerate}
 \end{frame}
@@ -245,7 +245,7 @@
     Queste procedure di alimentazione si dividono in due categorie:
     \begin{enumerate}
         \item \textbf{Simmetriche:} in cui i dati comuni di entrata e uscita di una articolo vengono inseriti solo una volta, mentre vengono inseriti due volte i dati disgiunti.
-        \item \textbf{Complesse:} nelle quali ad ognmi movimento ne sono associati altri.
+        \item \textbf{Complesse:} nelle quali ad ogni movimento ne sono associati altri.
     \end{enumerate}
 \end{frame}
 
@@ -264,7 +264,7 @@
 \begin{frame}{Procedure di base - Procedure di alimentazione automatiche dai flussi di verifica}
     Per ovviare ai possibili errori i sistemi informativi offrono varie procedure di verifica delle giacenze.\\
     Queste procedure mappano i risultati degli \textit{inventari a rotazione}, in questa tipologia di inventari si divide il magazino in sezioni delle quali si fa il conteggio fisico a rotazione.\\
-    I dati ottenuti dal congteggio vengono inseriti nel sistema informativo, il processo di inserimento può essere reso più semplice e veloce dalla tecnologia, per esempio usando delle etichtte RFID (IoT) che comunicano al sistema la loro presenza.
+    I dati ottenuti dal conteggio vengono inseriti nel sistema informativo, il processo di inserimento può essere reso più semplice e veloce dalla tecnologia, per esempio usando delle etichtte RFID (IoT) che comunicano al sistema la loro presenza.
     \esempio{\link{https://internetretailing.net/magazine-article/case-study-decathlon-getting-smart-with-rfid-tags/}{Decathlon usa gli RFID}}
 \end{frame}
 
