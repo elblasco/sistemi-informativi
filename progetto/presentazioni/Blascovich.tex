@@ -1,0 +1,49 @@
+\documentclass[a4paper]{article}
+\usepackage{blindtext}
+
+\newcommand{\cambioSlide}{\vspace{1em} \hrule \vspace{1em}}
+
+\title{Presentazione}
+\author{Blascovich Alessio}
+\date{}
+
+\begin{document}
+	\maketitle
+	Salve, sono Alessio Blascovich e insieme a Piero Fontanive presenteremo il capitolo riguardante l'area logistica.
+	\cambioSlide
+	L'area logistica di un'azienda si occupa di tenere traccia degli ordini lungo il trasporto, creare report per la direzione funzionale e l'alta direzione(piramide di Anthony) infine è utile anche poter prevedere in base al periodo storico quali saranno le esigenze di un magazzino.
+	\cambioSlide
+	Nelle aziende più grandi i magazzini richiedono tecnologie ed investimenti maggiori per poter gestire moli di merci elevate.\\
+	In questi magazzini è possibile addirittura tenere traccia di provenienza e destinazione di gruppi di articoli chiamati lotti oppure di singoli articoli identificati da una matrice, è perfino possibile muovere parzialmente o interamente in automatico gli articoli.\\
+	Un esempio ne è l'azienda LCS che costruisce software e magazzini automatici per privati e aereoporti, produce anche apparecchiatura robotizzata per le linee di produzione.
+	\cambioSlide
+	L'area logistica si occupa di definire queste 3 informazioni di base, ovvero l'anagrafica degli articoli, la composizionde fisica e logica del magazzino sul quale si andrà a lavorare e cronologia dei movimenti compiuti dagli articoli.
+	\cambioSlide
+	Il più grande problema che ci si trova ad affrontare per quanto riguarda l'anagrafica degli articoli è decidere come comporre il codice degli articoli, analogo a trovare come comporre una chiave primaria nei database.\\
+	E' necessario trovare dei metodi che generino meno omocodia possibile e che siano facilmente leggibili da un operatore umano(caratteri alfanumerici) o anche da una macchina(lunghezza).
+	\cambioSlide
+	Per evitare il più possibile i problemi visti prima si devono utilizzare dei piani di codifica, ovvero dei metodi che ci permettono di definire un nome univoco ad articolo.\\
+	I piani di codifica si dividono in due categorie codifica lineare e codifica condizionata.
+	\cambioSlide
+	Nella codifica lineare si scelgono tra i 15 e i 20 caratteri, le strighe sono generate facendo un intersezione tra tutte le caratteristiche scelte dell'articolo, ogniintersezione tra tutte le caratteristiche deve generare al più un articolo.\\
+	Le codifiche condizionali invece la lunghezza non è fissa ma si sceglie ad ogni passaggio la nuova parte di codice in base alle scelte fatte in precedenza.
+	\cambioSlide
+	Esempio
+	\cambioSlide
+	Dopo aver creato il codice che identifica un articolo all'interno dell'azienda bisogna comporre l'anagrafica completa dell'articolo.\\
+	Oltre al codice è necessario descrivere il prodotto, in alcuni casi la descrizione puù essere composta con il codice, viene definità un unità di misura che può essere diversa da quella di acquisto ed infine si definisce in che modo verrà imballato l'articolo.
+	\cambioSlide
+	Si indica anche se un articolo viene acquistato oppure prodotto internamente, le politiche di gestione del prodotto ovvero a scorta (i  parametri su quanta scorta del prodotto devo tenere in magazzino) o a fabisogno( oppure a impegno ci si approvigiona solo su richiesta esplicita), la movimentazione che indica e l'articolo è fisico oppure è presente a solo scopo anagrafico (il montaggio di un modbile non è un prodotto ma in magazzino è presente), lo stato delle scorte di quel prodotto specifico infine si può allegare al progetto una scheda tecnica composta magari da file multimediali foto, video, istruzioni ecc\dots
+	\cambioSlide
+	Con l'anagrafica abbiamo introdotto un ulteriore "problema" ovvero l' approvigionamento di una rticolo che non viene prodotto internamente.\\
+	Gli ERP contengono varie informazioni che cambiano da contesto a contesto , in generale per l'approvigionamento di merci sono presenti 3 parametri: il lead time ovvero il tempo tra ordine e arrivo della merce, la scorta minima che rappresenta la minima quantità da detenere in magazzino per poter rimanere in una condizione safe e il livello di riordino ovvero la quantità sotto la quale si fa partire un ordine, il livello di riordino deve tenere conto di non scendere sotto la scorta minima durante il lead time.
+	\cambioSlide
+	Grafico
+	\cambioSlide
+	Nell'anarafica di un prodotto devono essere presenti diverse informazioni divise in categorie.\\
+	Informazioni sul fornitore come il suo nome, il lead time e il lotto minimo ordinabile.\\
+	Informazioni sui clienti come il loro nome, codice scelto dal cliente che può essere discorde col codice con cui un prodotto viene identificato in un magazzino, imballaggio scelto dal cliente e etichette richieste dal cliente(esistono vari standard di etichette).\\
+	Un articolo deve contenere alcuni indicatori specifici per quanto riguarda la gestione economica di esso come l'aliquota IVA al quale deve essere venduto.
+	\cambioSlide
+	Esempio con link
+\end{document}
