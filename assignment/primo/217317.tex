@@ -1,0 +1,87 @@
+\documentclass{report}
+
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{hyperref}
+
+\author{Blascovich Alessio\\ 217317\\ \href{mailto:alessio.blascovich@studenti.unitn.it}{alessio.blascovich@studenti.unitn.it}}
+\title{Sistemi informativi\\ Primo assignement}
+\date{}
+
+\begin{document}
+   \maketitle
+
+   \begin{abstract}
+        Analizzare i ruoli del personale del supermercato SOTTOCASA (200 punti vendita sparsi in tutta Italia, di cui 10 ipermercati), classificarli in base alla piramide di Anthony e provare a tratteggiarne l'esigenza informativa.
+   \end{abstract}
+   
+   \chapter*{Personale esecutivo}
+   Considerando le grandi dimensioni dell'azienda possiamo assumere possieda dei magazzini di proprietà e quindi abbia dovuto assumere:
+   \begin{itemize}
+        \item Addetto alla movimentazione delle merci nel magazzino e da/verso l'esterno.
+        \begin{itemize}
+            \item Questo tipo di figura avrà a disposizione una serie di strumenti per monitorare la merce (lettori di codici a barre, lettori RFID) e dovrà avere inoltre una serie di indicazioni rispetto a che ordini arriveranno, che ordini bisogna preparare per la spedizione e se bisogna spostare degli articoli all'interno del magazino.
+        \end{itemize}
+
+        \item Per portare la merce dal magazzino al supermercato la ditta sarà fornita di una flotta di autisti.
+        \begin{itemize}
+            \item Ad ogni autista dovrà essere fornita la lista dei viaggi da compiere nel suo turno e per ogni viaggio dovranno essere forniti i documenti di trasporto adeguati.
+        \end{itemize}
+   \end{itemize}
+   Passando poi all'interno del punto vendita in sè possiamo trovare:
+   \begin{itemize}
+        \item Ogni punti vendita (dipendentemente dalle dimensioni) dovrà avere una squandra di magazzinieri che raccoglie gli ordini che arrivano dall'esterno.
+        \begin{itemize}
+            \item Ogni magazziniere dovrà essere dotato di scanner o lettore RFID per registrare la merce in entrata e segnare gli ordini arrivati nei docuemnti che gli sono stati assegnati ad inizio turno.
+        \end{itemize}
+
+        \item Ogni super/iper mercato dovrà avere una squadra di commessi.
+        \begin{itemize}
+            \item Ogni commesso dovrà essere costantemente notificato da un palmare dalla presenza/assenza di un articolo.\\
+                Il palmare dovrà registrare, in un sistema interno al punto vendita, quando vengono aggiunti sullo scaffale $x$ unità di un prodotto e la cassa dovrà segnare quando ne vengono sotratte $y$.\\
+                Il palmare dovrà anche notificare il magazzino quando un impegato preleva dal magazzino mentre la cassa dovrà notificare il sistema degli scaffali.
+        \end{itemize}
+
+        \item Ogni punto vendita dovrà possedere almeno un cassiere.
+        \begin{itemize}
+            \item Ogni cassa sarà provvista di lettore di codice a barre per registrare l'uscita di ogni tipo di articoli, la cassa viene sbloccata con il codice dell'operatore che permette di conoscere quanti introiti produce un cassiere in $n$ tempo.
+        \end{itemize}
+
+        \item Soprattutto gli ipermercati devono possedere dei banchi specifici salumi/pesce/pane con degli addetti.
+        \begin{itemize}
+            \item Quasi ogni giorno l'addetto deve ricevere i prezzi aggiornati delle merci e le bilancie che usa sono aggiornate di conseguenza da un sistema centralizzato.
+        \end{itemize}
+   \end{itemize}
+
+   \chapter*{Direzione funzioanale}
+   Come nel capitolo precedente parto dall'analizzare la struttura dei magazzini distrettuali.
+   \begin{itemize}
+        \item Ogni magazzino avrà bisogno di un direttore.
+        \begin{itemize}
+            \item I direttori dei magazzini dovranno leggere periodicamente i report delle movimentazioni degli articoli effettuando, di conseguenza, ordini dai grossisti ai quali la catena si appoggia.
+        \end{itemize}
+
+        \item Direttore di un punto vendita, presente in ogni supermercato.
+        \begin{itemize}
+            \item Il direttore dovrà monitorare lo stato del magazzino della filiale per effettuare gli ordini in un tempo ragionevole, emanando ordini al magazzino e docuementi generati in automatico per i magazzinieri.\\
+            Dovrà leggendo i report economici del punto vendita inoltrare una richiesta al direttore di distretto per poter alterare l'organico del negozio.\\
+            Infine leggendo in modo più specifico le categorie di prodotti venduti dovrà inoltrare all'alta direzione un report per poter decidere future promozioni.
+        \end{itemize}
+
+        \item Il direttore di distretto sovraintende a diversi punti vendita in un'area geografica.
+        \begin{itemize}
+            \item Leggendo i report econommici può decidere di alterrare l'organico di un punto vendita o di un magazzino.
+            \item Decide alcuni fornitori locali di prodotti del luogo, tipicamente in Italia i vini cambiano di molto tra le varie zone geografiche.
+            \item Producono un report di anadamento economico per ogni zona.
+        \end{itemize}
+   \end{itemize}
+
+   \chapter*{Alta direzione}
+   Presuppongo che l'alta direzione sia formata da più figure specializzate ma che chiameremo consiglio di amministrazione.\\
+   Il consiglio di amministrazione può:
+   \begin{itemize}
+        \item Decidere l'apertura e chiusura di nuove sedi in base ai report economici di zona forniti dai direttori distrettuali.\\
+            Solitamente le aperture e le chiusure devono essere mirate in un luogo dove la situazione è favorevole al cambiamento.
+        \item In base ai prezzi forniti dai grossisti decidono da chi andarsi a fornire e di conseguenza quali saranno i prezzi al cliente.
+        \item Dai report economici forniti dai direttori delle filiali e dai direttori dei magazzini possono decidere di togliere prodotti dagli scaffali, aggiungerne oppure iniziare delle promozioni.
+   \end{itemize}
+\end{document}

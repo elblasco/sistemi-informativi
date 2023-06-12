@@ -1,0 +1,10 @@
+# LaTeX temp files
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.gz
+*.out
+*.toc
+*.nav
+*.snm
