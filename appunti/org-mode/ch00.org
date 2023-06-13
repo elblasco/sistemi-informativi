@@ -1,0 +1,73 @@
+* Introduzione e principi generali
+** Società della conoscenza
+Una società nella quale l'informazione assume una centralità fondamentale nella vita quotidiana, e che quindi fonda la propria crescita sul sapere l'innovazione e la ricerca.\\
+Questa idea mette le basi per una socità basata sull'informazione che soppianta la precendente era, l'era industriale basata su dispositivi meccanici.
+*** La strategia di Lisbona
+Nel 2000 l'UE si è prefissatat un piano strategico per il decennio successivo, *diventare l'economia basata sulla connoscennza più competitiva del pianeta*, quindi realizzando unoi sviluppo sostenibile con nuovi posti di lavoro e più coesione sociale.\\
+E' qui di richiesta una strategia mondiale volta a:
++ predisporre il passaggio verso una società dell'informazione e di ricerca & sviluppo.
++ modernizzre il modello sociale.
++ sostenere uno sviluppo sano.
+
+** Digitalizzazione e convergenza tecnologica
+Sempre più i beni materiali verranno astratti per essere trasposti in modo digitale, e diventeranno interscabiabili in tempo reale.\\
+Questo cambiamento perterà a delle conseguenze.
++ *Veloità* Ogni aspetto della vità umana e ogni istituzione opererà sempre di più in tempo reale.
++ *Connettività* Ogni cosa viene interconnessa in modo sempre maggiore, e.g. frighi smart.
++ *Intangibilità* Molti oggetti e processi diventano intangibili per l'essere umano, e.g. e-commerce e cartelle cliniche.
+
+** Nuove leggi
+Queste nuove leggi regolano il nostro nuovo modello di società, ed una loro infrazione porta alla rottura nel nostro modello sociale.
+*** Leggi di Moore
+**** 1° legge
+Gordon Moore disse : "Le prestazioni dei processori, e il numero di transistor ad esso relativo, raddoppiano ogni 18 mesi.".\\
+I limiti di questa legge sono solo i raggiungimenti di vari limiti fisici imposti dalla dimensione sempre minore dei transistor, però le nuove capacità raggiunte forniscono per uno stesso prezzo un raddoppio delle prestazioni.
+**** Conseguenze
+La crescita esponenziale mette le basi per la /singolarità tecnologica/, ovvero entro una x data (2045) un singolo computer potrebbe avere capacità computazionale pari a tutta l'umanità.
+**** 2° legge
+"L'investimento per realizzare una nuova tecnologia di microprocessori cresce in maniera esponenziale con il tempo."\\
+Tutte le innovazioni che rendono possibile dimension i sempre ridotte hanno però un costo esponenziale, infatti si ha sempre maggior bisogno di studi, ricerche e test per garantire l'affidabilità dei nuovi componenti.\\
+Questo incremento dei costi ha come richiesta un aumento sempre mggiore del fatturato e quindi delle conseguenze:
++ Riduzione del numero di società che possono permettersi di investire.
++ Fenomeni di fusione di società.
++ Crescita dei rischi legati ad un investimento.
+Si viene quindi a formare un consolidamento del mercato che arriva ad avere barriere di entrata altissime, con una gruppo ristrretto di aziende che controlla il mercato.\\
+Diventa problematico anche avere un ritorno economico per questi nuovi invetsimenti, visto che i mercati di massa sono un numero finito si potrebbe arrivare in un punto in cui il benefit non giustifica l'investimento iniziale.
+*** Leggi di Sarnoff, MetCalfe, Reed
+**** Legge di Sarnoff
+Legata al concetto di broadcasting, "Il valore V di una rete di broadcasting è direttamente proporzionale al numero N degli utenti".
+\begin{equation*}
+V = N
+\end{equation*}
+Quindi il valore della rete cresce in base agli utenti connessi.
+**** Legge di MetCalfe
+"Il valore V di un sistema di comunicazione cresce con il quadrato del numero N di persone collegate".
+\begin{equation*}
+V = N^{2}-N
+\end{equation*}
+E.g. il fax da solo non vale nulla, acquista valore solo se diversi utenti iniziano ad usare il Fax.\\
+Questa legge implica che la connessione di reti tra loro indipendenti è maggiore rispetto alla somma delle singole reti.\\
+Questa legge si rifà molto allo sviluppo di iternet.
+**** Legge di Reed
+"L'utilità delle grandi reti, formate da reti di reti (con particolare riferimento alle reti di relazione sociale) cresce esponenzialmente con la dimensione della rete".
+Con $n$ numero di nodi ho $2^{n}-n-1$ possibili sottoguppi.
+**** Conseguenze
++ Distribuzione di solo contenuto, valore lineare. [[Legge di Sarnoff]]
++ Attivazioni di comunicazioni 1 a 1, valore quadratico. [[Legge di MetCalfe]]
++ Comunità, social netwotk, valore esponenziale. [[Legge di Reed]]
+Risulta quindi molto conveniente puntare sulla costruzione di comunità piuttosto che su sistemi di broadcast
+*** Hype Cycle di Gartner
+[[file:../img/hype_cycle.png]]
+Il ciclo di vita di un progetto è diviso in fasi.
++ *Technology trigger* ovvero i primi concept, l'interesse dei media con annessa publicità.\\
+  Spesso in questa fase non esistono prodotti utilizzabili.
++ *Picco di aspettativa* molta pubblicità anticipata produce molto hype, molte aziende cavalcano questa onda e ne escono vittoriose, ma esistono decine di casi in cui queto non è vero.
++ *Picco di disillusione* l'interesse svanisce quando i test e le implementazione non soddisfano le aspettative, gli investimenti continuano solo se l'azienda riesce a riprendersi.
++ *Risalita dall'imbarazzo* molti esempi dimostrano come questa tecnologia sia utile.
++ *Altopiano della produttività* il mercato si assesta e la tecnologia diventa di uso comune.
+*** Magic Quadrant di Gartner
+[[file:../img/magic_quadrant.png]]
+*** Long tail di Anderson
+[[file:../img/long_tail.png]]
+Le grandi aziende posso arrivare a ricavare la maggior parte del loro fatturato dalla long tail, e.g. Amazon il 57%.\\
+Nei nuovi mercati la coda ha un valore molto più alto, mentre i rivenditori sono focalizzati nella parte sinistra della distribuzione.
