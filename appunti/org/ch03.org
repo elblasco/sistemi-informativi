@@ -3,3 +3,41 @@ Ancora prima di poter iniziare ad organizzare un sistema informativo è necessar
 + *Make* costruire il proprio
 + *Buy* comprarlo da un'azienda esterna
 + *Outsource* farlo gestire completamente da un'altra azienda
+** Opzione make
+Qquesta scelta organizzativa prevede la costruzione integrale di tutto il sistema informativo (software), questa opzione prevede l'instaurazione di un team di lavoro apposito.\\
+Sebbene sia una scelta di nicchia rimane un opzione nelle grandi aziende.
++ *Costi fissi notevoli* infatti l'azienda deve formare il team per lo sviluppo.
++ *Investimenti consistenti* l'azienda deve acquistare comunque tutto l'hardware e il software supplementare.
++ *Struttura chiusa* il sistema così costruito non si dovrà mai interfacciare con il mercato per cui potrebbe diventare obsoleto in poco tempo.
++ *Tempi di soluzione* il team per lo sviluppo potrebbe affrontare delle fasi critiche nella ricerca della soluzioen migliore.
++ *Mantenimento interno del know-how* viene mantenuto tutto all'interno dell'azienda quindi la riservatezza aumenta.
++ *Soluzioni ad-hoc* tutte le soluzioni presenti nel SI saranno pu ntuali e fatte ad hoc per gli utilizzatori.
+** Opzione buy
+Acquisto del proprio SI dall'esterno e costruzione di un piccolo team per il mantenimento ed il dialogo con la casa madre.\\
+Costituisce la scelta tipica delle PMI, anche se gli ERP stanno diventando sempre più comuni nelle grandi imprese.
++ *Costi fissi* seppur ridotto dobbiamo comunque costruire un team per mantenere il SI.
++ *Parziale smobilitazione* l'azienda si deve dotare solo dell'infrastruttura necessaria.
++ *Concentrazione sul core business* l'azienda deve occuparsi di una cosa in meno e quindi può dedicarsi al suo core business.
++ *Dipendenza dall'esterno* per cambiare fornitore ci vuole moltoquindi il potere della software house è elevato.
++ *Maggior flessibilità rispetto a make* il fornitore essendo sul mercato dovrà essere sempre competitivo.
++ *Fuorisce parte del know-how* perchè la software house deve conoscere i processi ed i dati interni all'azienda.
++ *Non proprietà del software* gli investimenti fatti sul software non portano alla proprietà di esso.
++ *Modello del SI mediato* non essendo l'unico cliente la soluzioen proposta dalla software house non sarà ad-hoc.
+
+[[file:../img/make_vs_buy.png]]
+
+** Opzione outsource
+Con questa opzione si delega completamente all'esterno la gestione e la creazione del SIA, tipicamente va pagato un canone annuale.\\
+E' bene ricordare che outsourcing è diverso da:
++ *Hosting* si affida all'esterno solo l'harware ma il softare rimane proprietario.
++ *Body rental* utilizo on demand di esterni per trasformare i costi fissi in variabili.
+L'abbassamento dei costi di connessione, e la crescente esigenza di sicurezza posizione questa scelta come favoruta tra le PMI.
++ *Costi variabili* non c'è persojnale ma bisogna pagare un canone
++ *Totale smobilitazione degli investimenti* non ci sono investimenti iniziali per l'hardware ed il software.
++ *Completo vincolo con il fornitore*
++ *Maggior flessibilità* rispetto alle altre opzioni questa è la più flessibile data la possibilità di scalare in ogni momento.
++ *Fuoriuscita di tutto il know-how* il know-how dei processi e dei dati è completamente affidato a terzi.
++ *Perdita di controllo* il fornitore ha un potere contrattuale elevatissimo.
++ *Impossibilità di interventi diretti*.
++ *Aderenza totale al mercato*.
++ *Modelli mediati* essendo una soluzione ancora più generale l'acquirente ha poco spazio per soluzioni ad hoc.
