@@ -1,0 +1,5 @@
+* Scelte organizzative
+Ancora prima di poter iniziare ad organizzare un sistema informativo è necessario comprarne uno, ci sono 3 opzioni:
++ *Make* costruire il proprio
++ *Buy* comprarlo da un'azienda esterna
++ *Outsource* farlo gestire completamente da un'altra azienda

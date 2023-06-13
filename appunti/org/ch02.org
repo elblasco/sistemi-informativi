@@ -34,3 +34,31 @@ Come si vede nell'immagine della piramide di Anthony il sistema informativo usat
   + Vase di dati operazionale
   + Funzioni operative
 *** Sistema informazionale
++ Funzioni principali
+  + Informazioni sui risultati rispetto agli obbiettivi prefissati
+  + Confronto tra indicatori aziendali e paramentri esterni
+  + Facilitare il processo decisionale
++ Azioni sui dati
+  + Aggregazione di grandi moli di dati
+  + Analisi con profondità temporale
+  + Ricerca per argomento anzichè per evento
+  + Analisi multidimensionale
+Il punto fondamentale dei sistemi informativi è la base di dati che in questa sezione si chiama "Data Warehouse".
++ Componenti fondamentali
+  + Wherehouse costantemente alimenato
+  + Strumenti di analisi
+** Comparazione tra i sistemi informativi
+Presentano ovviamente delle differenze, pertanto nel tempo si sono evoluti non come due sottocategorie di un unico sistema, ma bensì come due tipi di sistemi assestanti.
++ *OLTP (On Line Transaction Processing)* pensati per supportare grandi moli di transizioni con molti utenti collegati, sono ottimizzati per gestire i processi operazionali di un'azienda.
++ *OLAP (On Line Analytical Processing)* utili per analizzare in modo interattivo i dati, ottimizzati per l'elaborazione di grandi moli di dati e con molta flessibilità nelle interrogazioni.
+ |                              | OLTP                            | OLAP                                   |
+ |------------------------------+---------------------------------+----------------------------------------|
+ | Finalità                     | Supporto all'operatività        | Supporto al processo di decisione      |
+ | Utenti                       | Molti, operai                   | Pochi, direzione                       |
+ | Dati                         | Analitici                       | Sintetici, solitamente numerici        |
+ | Modalità di utilizzo         | Guidata, passo passo            | Integrazioni ad hoc                    |
+ | Dati per attività elementari | Bassa                           | Alta                                   |
+ | Orientamento                 | Per processo/applicazione       | Per area/tema                          |
+ | Aggiornamento dei dati       | Continuo                        | Sporadico                              |
+ | Copertura temporale          | Dati correnti                   | Storica                                |
+ | Ottimizzazione               | Per accessi lettura e scrittura | Per accessi in lettura ed elaborazione |
