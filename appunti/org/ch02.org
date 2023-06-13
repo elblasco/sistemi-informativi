@@ -1,0 +1,36 @@
+* Struttura dell'azienda e del suo sistema informativo
+** Esigenza informativa
+La funzione primaria di un sistema informativo è interfacciarsi con che fa funzionare l'azienda, o parte di essa, attraverso la pripria attività.\\
+In questa definizione ricadono praticamente tutti i componenti di un'azienda dal dirigente al semplice operaio, il sistema si deve quindi adattare a molte necessità differenti con livelli di astrazione differente.\\
+Si conclude che i livelli operativi (operai, impiegati, ...) hanno bisogno di informazioni dettagliate e attuali, mentre man mano che si sale con i livelli decisionali sale anche il livello di astrazione e di sintesi.
+
+** Schema di Anthony
+[[file:../img/anthony_mark_02.png]]\\
+Questo modello distingue tra tre diversi livelli di ruolo, ognuno di questi livelli comunica con quelli adiacenti con cicli di pianificazione e controlli.
++ *Alta direzione* identifica gli obbiettivi primari a medio-lungo termine.
++ *Direzione funzionale* si occupa di analisi economiche e previsioni a medio termine.
++ *Personale esecutivo* attua i piani definiti.
+  |                      | Frequenza  | Dati            | Provenienze (rispetto all'azienda) | Volumi  |
+  |----------------------+------------+-----------------+------------------------------------+---------|
+  | Alta direzione       | sporadica  | molto sintetici | interna ed esterna                 | bassi   |
+  | Direzione funzionale | prefissata | sintetica       | interna                            | medi    |
+  | Personale esecutivo  | continua   | analitica       | interna                            | elevati |
+
+** Scomposizione del sistema informativo
+Come si vede nell'immagine della piramide di Anthony il sistema informativo usato deve essere di due tipi diferenti, ovvero operazionale per le fasce più in vasso e informazionale per le fasce più in alto.
+*** Sistema operazionala
++ Funzioni principali
+  + Automazione di attività procedurali
+  + Definizione nuovi processi
+  + Aiuto nelle attività aziendali
+  + Raccolta di dati
+  + Guida per l'operatore
++ Azioni sui dati
+  + Accesso interattivo: lettura, scrittura dei dati puntuali
+  + Aggiornamento puntuale dei dati
+  + Elaborazione di eventi
+  + Aggregazione per il calcolo di stato
++ Componenti fondamentali
+  + Vase di dati operazionale
+  + Funzioni operative
+*** Sistema informazionale

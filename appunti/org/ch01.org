@@ -1,0 +1,99 @@
+* Concetti generali sull'informatica aziendale
+** Sistema Informativo Aziendale (SIA) prima definizione
+Applicazione dell'informatica nella gestione dell'organizzazione di impresa.\\
+Ha come scopo la definizione di processi aziendali che inviano informazioni all'interno ed all'esterno dell'azienda nel momento in cui l'informazione è necessaria.\\
+Il modo in cui il SIA interpreta le dinamiche interne e si interfaccia con il mondo esterno è scelto dall'azienda in modo tale da rappresentare in modo preciso i fenomeni che si vuole trattare.\\
+Un SIA racccoglie dati in archvi organizzati, estrae informazioni tramite l'elaborazione di informazioni e distribuisce informazioni agli utenti.
+** Fenomeni che guidano alla costruzione di un SIA
+La costruzione di un SIA è guidata da:
++ L'identificazione di quali fenomeni, interni ed esterni, l'azienda vuole rappresentare.
++ La modalità attraverso la quale dovranno essere raprresentati i fenomeni, quindi che tipo di memorizzazione e il grado di precisione.
++ Dalla natura delle informazioni che l'azienda si aspetta di ottenere.
+** Elementi che compongono un SIA
+I componenti di un SIA sono molteplci e legati ai fenomeni che un'azienda vuole arppresentare, posso però essere divisi in tre classi.
++ *Dati* Fungono come rappresentazione, attraverso i processi, di fenomeni aziendali elementari.\\
+  Vengono raccolti per essere memorizzati in modo ordinato, elaborati e usati per generare nuovi processi.\\
+  I dati posso essere divisi in varie categorie:
+  + di configurazione, e.g. la valuta corrente o il nome dell'azienda
+  + operativi, e.g. le informazioni relative alo stato di un progetto
+  + di supporto, e.g. il nome del server web attraverso il quale un cliente ha effetuato una richiesta
+  + di stato, e.g. il fatturato aziendale
++ *Peocedure* sono la parte dinamica di un istema informativo, sono le azioni che un sistema informativo compie per aderire alla realtà.\\
+  Sono azioni che operano sui dati categorizzabili come:
+  + Acquisizione
+  + Controllo ed elaborazione
+  + Pianificazione
++ *Mezzi e strumenti per il trattamento delle informazioni* l'apparecchiatura fisica attraverso la quale il SIA opera per raccogliere/memorizzare/elaborare/restituire dati.
+Esiste anche una parte organica che deve occuparsi del mantenimento del SIA, che è per sua natura dinamico e perciò soggetto ad evoluzioni.
+** Sistema Informativo Aziendale (SIA) seconda definizione
+L'insieme dei dati, delle procedure, dei modelli organizzativi e dei mezzi adottati per utilizzare l'informatica all'interno dell'azienda.
+*** Sistema delle informaioni aziendali
+Insieme delle informazioni quantitative e qualitative ottenibili sullo stato passato/presente/futuro dei fenomeni aziendali.\\
+Per cui la struttura del SIA definisce e vincola il sistema delle informazioni aziendali.
+** Fattori di evoluzione di un SIA
+Come già detto i SIA sono dinamici e per cioè soggetti ad evoluzioni, ma cosa scaturisce questi cambiamenti?
+I fattori sono diversi e categorizzabili in due tipi di eventi:
++ *Interni* miglioramento delle prestazione, miglioramento della rappresentazione aziendale.\\
+  Quindi modifiche che portano alla creazione di nuovi processi.
++ *Esterni* come i vincoli imposti dal mercato/dallo Stato/da un fornitore, quindi necessario solo all'agente esterno ma non all'azienda in se.
+Spesso si tende a migliorare il SIA dove si vede un vantaggi
+o nel breve periodo, questo porta svantaggio in settori in cui il vantaggio e difficilmente quantificabile oppure sul medio/lungo periodo.\\
+E' perciò fondamentale che lo sviluppo avvenga nel modo più armonico possibile e complemetare a tutti i bisogni dell'azienda.
+** L'impatto dei SIA
+*** Conoscenza dei fenomeni aziendali
+I SIA diffondondono informazioni all'interno di un'azienda, ma ogni persona all'interno dell'azienda ha bisogno di conoscere diversi fenomeni, le differenze di necessità sono:
++ *Livello di astrazione* le informazioni possono essere analitiche o sintetiche quindi ottenute elaborando diversi dati.
++ *Tempestività* la velocità con la quale le informazioni viaggiano all'interno dell'aienda.
++ *Livello di copertura* rappresenta quanti fenomeni vengono analizzati e da quanto tempo.
+Il SIA deve quindi assicurare di raggiungere tutti i destinatari di un informazione in un tempo accettabile e senza errori.\\
+Nelle aziende le informazioni viaggiano attraverso le due seguenti direzioni:
++ *Orizzontale* quindi tra le varie aree aziendali definendo e sincronizzando i processi.
++ *Verticale* attraverso l'organigramma aziendale, sintetizzando i dati all'occorenza.
+*** Processi classici
+Questa è la categoria dei procesi aziendali che hanno la maggior attrattiva dal punto di vista informatico, infatti da sempre i sistemi informativi vengono utilizzati per i seguenti scopi.
++ *Sviluppo di funzioni operative*, infatti il primo scopo scopo che un SIA ha è quello di automatizzare diverse azioni per:
+  + Ridurre il costo del lavoro automatizzando alcuni processi.
+  + Migliorare i processi definendoli meglio.
+  + Aumentare la mole e la qualità dei dati raccolti.
+  La prima area ad essere tpicamente automatizzata è l'area amministrativa perchè soggetta a molte standardizzazioni dl punto di vista legislativo.
++ *Pianificazione* la grande mole di dati che un SIA può raccogliere viene usata per pianificare delle future stategie ed avere una visione d'insieme di come l'azienda sta procedendo.
++ *Controllo* l'immediatezza nella disponibilità dei dati porta ad una possibilità di intervento estremamente rapida.
+*** Nuovi processi
+L'introduzione di nuove tecnologi spinge le aziende a dover generare dei nuovi processi:
++ *Organizzazione* magari proprio l'organinnazione interna dell'azienda viene ridefinita.
++ *Flussi* delle informazioni viene modificato.
++ *Modalità di trattamento dei dati* i dati raccolti dal SIA devono rispettare alcune legislazioni a livello statale o superiore.
++ *Sistemi di comunicazione*
+*** Business Process Rengineering (BPR)
+La spinta nel ricercare nuove forme organizzative dopo aver adottato una tecnologia innovativa.\\
+La tecnologia adottata serve ad esempio ad aumentare il numero e la qualità dei servizi offerti oppure offrire servizi di corredo rispetto al core business.\\
+Un esempio di BPR potrebbe essere l'introduzione degli ATM, le banche non hanno aumentato il numero di sporttelli ma introdotto il servizio di distribuzione contanti automatico.\\
+Il servizio risulta quindi sempre attivo, e con il tempo si è arrichito di servizi come la possibilità di pagare le bollette.\\
+[[file:../img/BPR.png]]
+** Struttura aziendale italiana
+Il tessuto sociale italiano ha favorito un maggiore sviluppo delle PMI che rappresentano il 99.9% delle imprese in Italia, mentre le grandi imprese sono solo lo 0.1%.\\
+Sul totale della forza lavoro del paese il 78% lavora in aziende medio o piccole.\\
+Nelle grandi aziende, necessariamente più strutturate, si è affrontata da tempo la necessità di migrare verso un SIA adeguato a loro, mentre nelle PMI questo cambio è iniziato dopo e in molti casi non ancora terminato.\\
+Una PMI ha molte più difficoltà nell'adottare un SIA per svariati motivi, docuti soprattutto alla grande flessibilità e alla mancanza di una strttura ben definita.\\
+Bisogna anche considerare che una PMI ha una struttura molto dipendente dal mercato un cui opera, è quindi necessario un SIA che si sappia interfacciare al meglio con la maggior parte delle casistiche.
+*** Conseguenze per i SIA
+I SIA per le grandi aziende si adattano molto male alle PMI, perchè necessitano di soluzioni più snelle e maggiormente configurabili.\\
+I grandi produttori di sistemi informativi hanno prodotti pensati appositamente per le PMI.
++ SAP: S/4HANA $\to$ Business One
++ Microsoft: Dynamics-AX $\to$ Dynamics-NAV
+I concetti generali e principali basici sono uguali, ma differiscono implementazioni e strutturazione diversa.
+** Cambiamenti organizzativi aziendali
+La disponibilità di strumenti come i SIA ha favorito la standardizzazione e la velocizzazione dei processi classici.\\
+Dall'altra parte la maggior quantità e qualità dei dati ha favorito un'enorme innovazione.
+*** Organizzazione interna
+L'evoluzione dei SIA e l'uso sempre maggiore di essi li ha portati ad essere una leva strategica non indifferente.
++ Riduzione di di personale amministrativo.
++ Riqualifica dei ruoli in tutta l'azienda.
++ Riduzione dei ruoli di supporto, come la segreteria e il mantenimento di archivi.
++ Revisione dei processi di front office, e.g. le video conferenze e le mail.
++ Revisione del modello organizzativo, si è passati da un'organizzazione per funzioni ad una per processi.
++ Reperimento sempre più dettagliato di info sul mercato e sui clienti.
+*** Organizzazione esterna
+Permette di ripartizionare le risorse dell'azienda in luoghi molto distanti l'uno dall'altro.\\
+Le grando aziende hanno iniziato in processo chiamato "terziarizzazione" ovvero una delegazione ad aziende più piccole e molto specializzate, che a volte diventano delle e vere proprie succursali.\\
+Per questi motivi una struttura che prima era monolitica diventa reticolare.
