@@ -3,6 +3,7 @@ Ancora prima di poter iniziare ad organizzare un sistema informativo è necessar
 + *Make* costruire il proprio
 + *Buy* comprarlo da un'azienda esterna
 + *Outsource* farlo gestire completamente da un'altra azienda
+
 ** Opzione make
 Qquesta scelta organizzativa prevede la costruzione integrale di tutto il sistema informativo (software), questa opzione prevede l'instaurazione di un team di lavoro apposito.\\
 Sebbene sia una scelta di nicchia rimane un opzione nelle grandi aziende.
@@ -12,6 +13,7 @@ Sebbene sia una scelta di nicchia rimane un opzione nelle grandi aziende.
 + *Tempi di soluzione* il team per lo sviluppo potrebbe affrontare delle fasi critiche nella ricerca della soluzioen migliore.
 + *Mantenimento interno del know-how* viene mantenuto tutto all'interno dell'azienda quindi la riservatezza aumenta.
 + *Soluzioni ad-hoc* tutte le soluzioni presenti nel SI saranno pu ntuali e fatte ad hoc per gli utilizzatori.
+
 ** Opzione buy
 Acquisto del proprio SI dall'esterno e costruzione di un piccolo team per il mantenimento ed il dialogo con la casa madre.\\
 Costituisce la scelta tipica delle PMI, anche se gli ERP stanno diventando sempre più comuni nelle grandi imprese.
@@ -41,3 +43,27 @@ L'abbassamento dei costi di connessione, e la crescente esigenza di sicurezza po
 + *Impossibilità di interventi diretti*.
 + *Aderenza totale al mercato*.
 + *Modelli mediati* essendo una soluzione ancora più generale l'acquirente ha poco spazio per soluzioni ad hoc.
+
+** Figure professionali nell'informatica aziendale
+Le figure professionali "informatiche" che si trovano all'interno di un'azienda dipendono dal grado di maturità informatica dell'azienda stessa.
+*** Livello 1
+Il team informatico è costituito da un insieme di persone molto ristretto, con competenze molto diversificate e solo parzialmente dedicate al campo IT dell'azienda.\\
+Si occupano, in modo indistinto, di quasi tutto, questo è tipico delle fasi iniziali di automazione dell'azienda.\\
+In questa fase il team è caratterizato da una struttura puramente orizzontale, con l'assenza di un budget ben definito e degli obbiettivi specifici.\\
+Purtroppo il team ha una visione miope dell'organizzazione e del ruolo del IT nell'azioneda.
+*** Livello 2
+Comincia a formarsi un'organizzazione all'interno del team, e quindi con delle funzioni di responsibilità, il responsabile EDP (Electronic Data Processing).\\
+Si delineano anche altri ruoli, sottostanti ad esso.
++ Il sistemista che gestisce l'infrastruttura tecnologica.
++ L'analista, che supporta gli utenti e fornisce indicazioni per nuove fuinzionalità e implementazioni.
++ Il programmatore che si occupa della scrittura del codice (non presente nel modello buy).
+Può succedere che i ruoli di programmatore e analista siano fusi in un unico individuo, l'ingegnere del software.
+
+[[file:../img/figure_professionali_livello_2.png]]
+
+*** Livello 3
+In questo livello la struttura del team diventa ancora più definita, viene riconosciuta una vera e propria direzione, quindi il team assume rilevanaza a livellop strategico per i progetti dell'azienda.
+
+[[file:../img/figure_professionali_livello_3.png]]
+
+*** Livello 4
