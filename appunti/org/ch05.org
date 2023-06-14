@@ -1,0 +1,82 @@
+* ERP: l'area amministrativa
+** Obbiettivi
+Gli obbiettivi che ha un ERP in questa sezione dell'azienda sono i seguenti:
++ Rispettare le norme fiscali e civilistiche, adempiere a tutti gli obblighi di legge.
++ Valutazione consuntiva dell'andamento aziendale (contabilità ordinaria/finanziaria/analitica).
++ Valuitazione presuntiva degli andamenti aziendali (budget e controllo della gestione).
+Questi punti sono in ordine dal più usato al meno, questo perchè ci sono poche aziende con un livello di informatizzazione così alto.
+** Struttura di base
+Le strutture di base su cui si articola il sistema informativo amministrativo sono le seguenti:
++ Parte anagrafica:
+  + Piano dei conti.
+  + Clienti.
+  + Istituto di credito.
++ Parte transazionale:
+  + Movimenti contabili.
+  + Movimenti finanziari.
+  + Movimentazione IVA.
+*** Piano dei conti
+Il piano dei conti è una struttura dati che rappresenta l'impianto logico del sistema contabile, è una struttura gerarchica divisa ad aree di interesse.
+*** Strutture anagrafiche speciali
+In ogni SI alcune voci contabili hanno informazioni aggiuntive, sviluppate con l'ausilio di strtture particolari.\\
+Le prencipali sono i clienti, i fornitori e gli istituti di credito.
+**** Clienti
+Le informazioni anagrafoche di un cliente sono raggrupate in sottoinsiemi.
++ *Anagrafica di base:* ovvero tutte le informazioni di un cliente non legate a flussi aziendali.
++ *Anagrafica finanziaria:* i dati usate per gestire un cliente dal punto di vista amministrativo (modalità di pagamento/codice cliente/ecc.).
++ *Anagrafica commerciale:* ovvero le informazioni che regolano il rapporto commerciale (sconti/spedione/ecc.).
+**** Fornitori
+Presentano informazioni analoghe ma simmetrice, adatte ad un flusso più passivo anzichè attivo.
+**** Istituti di credito
+Le informazioni anagrafiche legate alle banchesi siddividono in due categorie:
+1. Istituti dei clienti/fornitori, per questi è sufficente avere il BIC/SWIFT/IBAN.
+2. Istituti propri, per i quali è importante avere riferimenti contabili, remote banking, indicazioni sul tipo valuta e commissioni.
+Solitamente i sistemi ERP per le PMI si fermano qua, lasciando a moduli speciali la gestione finanziaria.
+*** Movimenti contabili
+**** Struttura dei movimenti contabili
+I movimenti contabili hanno quattro parti, due delle quali principali.
++ *Testa del movimento contabile:* contenente le informazioni che valgono per tutto il pagmento come: data, causale e tipo di movimento.
++ *Righe del movimento:* in cui sono presenti le informazioni proprie di ogni riga come: valuta, importo e segno della registrazione.
+Nei sistemi più raffinati ci sono anche le ulteriori due.
++ *Competenze:* indica il periodo nel quale il movimento è stato effetuato.
++ *Riferimento:* ovvero l'indicazione della provenienza di un'operazione.
+**** Struttura dei movimenti finanziari
+Sono previste solo la testa e le righe.
++ *Testa:* come il precedente, contiene: soggetto, debito o credito, tipo di movimento, ecc.
++ *Righe:* come le precedenti, contengono: scadenza, tipo di pagamento, valore riga, ecc.
+**** Movimenti IVA
+Dovendo rispettare le norme vigenti i casi particolari si sprecano.
++ esenzioni
++ Iva intracomunitaria
++ Plafond IVA
++ ecc.
+** Procedure di base
+*** Procedure di alimentazione
+I sistemi amministrativi froniscono due metodologie di alimentazione.
+**** Alimentazione interattiva
+Consiste nell'inserire a mano i dati all'interno di un form guidato.\\
+I sistemi sono molto intelligenti e fanno molti controlli:
++ *Congruenza dei dati:* la transizioni sono fatte in modo atomico.
++ *Correttezza dei dati:* i sistemi fanno una serie di controlli all'inserimento.
++ *Persistenza:* una volta fatto il submit la movimentazio/ne non è più annullabile o modificabile.
+Ad oggi la maggior parte delle alimentazioni non sono interattive.
+**** Alimentazione automatica
+Le operazioni contabili sono generate automaticamente dai flussi, in particolare da:
++ Fatture attive e passive.
++ Operazioni finanziarie.
+I SIA offrono procedure automatiche anche per:
++ *Pagamenti/Incassi* sia da istituti che da privati.
++ *Strumento di riconciliazione*, ovvero un controllo di congruenza con i dati in mano alle banche.
+** Flussi evolutivi
+Sono delle procedure che solo i sistemi più complessi e reffinati hanno.
+*** Contabilità analitica
+Fornisce un quadro più preciso sull'andamento dell'azienda, solitamente opera solo nella parte economica della contabilità ordinaria.\\
+Scompone la contabilità ordinaria in più voci analitiche dette /centri di costo/.
+**** Procedure di alimentazione
+Il sistema può essere alimentato in modo interattivo in modo autonomo o direttamente connesso al data-entry della contabilità ordinaria.\\
+I sistemi di alimentazione automatici creano, i movimenti di contabilità analitica, alla creazione dei movimenti contabili.\\
+Un altro modo di alimentazione automatica è il ribaltamento.
+**** Procedue di controllo
+Il sistema fornisce un insieme di procedure autonome per analizzare e controllare i dati, solitamente elaborano la movimentazione elementare per intervalli di tempo.
+*** Budget
+Il budget definisce delle previsioni sugli andamenti aziendali, viene sviluippato sulla parte economica del piano dei conti ordinari o nel piano dei conti di analitica.
