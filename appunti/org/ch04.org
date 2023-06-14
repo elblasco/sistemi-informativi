@@ -6,6 +6,7 @@ Sono SI orientati alla processazione di attività quotidiane, le loro funzionali
 + Acquisizione e organizzazione della conoscenza.
 + Elaborazione della situazione aziendale.
 Il sistema operazionale si deve quindi essere costruito attorno ad una base di dati strutturata e ben ordinata.
+
 *** Registrazione delle transizioni
 Una transazione è un'azione atomica, che rappresenta una o più azioni basiche che l'azienda ha interesse nel tracciare.\\
 Esistono due tipi di transizioni:
@@ -14,6 +15,7 @@ Esistono due tipi di transizioni:
 Una transizione non è sempre autocontenuta e può, a sua volta, generare altre transazioni a cascata.\\
 Ogni azienda genera transazioni ma non è obbligatorio registrarle tutte nel SI, dipende anche dal volume di azioni che devono essere registrate.\\
 Il volume dei dati (legati ad una transizione) è direttamente influienzato dalla struttura dell'azienda stessa, perchè più passaggi vengono compiuti più le informazioni legate ad essa crescono, di fattop ogni passaggio è una transazione.
+
 *** Pianificazione e controllo delle operazioni
 
 [[file:../img/pianificazione_operazioni.png]]
@@ -24,6 +26,7 @@ Le funzionalità che i processi di organizzazione devono avere sono piuttosto ar
 + Elaborare dei piani (ottimizzazione risorse e soncronizzazione dei passaggi).
 + Registrare l'avanzamento delle operazioni.
 + Misurare gli scostamenti rispetto agli obbiettivi.
+
 *** Organizzazione della conoscenza
 Lo scopo dei sistemi operazionali è l'archiviazione di dati, questi dato, o informazioni di supporto, vengono trattati in modo centralizzato così da fornire a diversi settori aziendali i dati sempre aggiornati.\\
 Le basi di conoscenza aziendali sono:
@@ -31,6 +34,7 @@ Le basi di conoscenza aziendali sono:
 + L'anagrafica (fornitori, clienti e prodotti).
 + Informazioni che correlano le anagrafiche.
 Le informaizoni mantenute in modo centralizzato devono pertanto essere strutturate, cioè riconducibili ad un insieme di caratteristiche prederminate e correlate.
+
 *** Elaborazione della situazione aziendale
 Dobbiamo pensare ad un SIA come ad un sistema dinamico, gli archivi ne sono la struttura, gli eventi che genarno transazioni gli input e le pianificazioni la parte dinamica.\\
 L'ultima parte modifica lo stato del sistema in base allo stato attuale e agli input.\\
@@ -38,7 +42,8 @@ Conoscere lo stato corrente permette di agire su stime aziendali, tramite apposi
 Gli indicatori di stato posso essere:
 + La giacenza degli articoli.
 + L'elenco degli ordini non evasi.
-** Informazione operativa
+
+** Informazioni operative
 Le informazioni operative vengono mantenute in modo ordinato all'interno di un archivio, che seppur fisicamente sepratato, virtualmente unitario.\\
 Al suo interno si distinguono alcune informazioni omogenee in struttura, gestione e destinazione d'uso:
 + *Movimenti:* sono transazioni semplici e finali come i movimenti in magazzino.
@@ -47,6 +52,7 @@ Al suo interno si distinguono alcune informazioni omogenee in struttura, gestion
   + Righe: dettaglui riferiti ai singoli prodotti.
 + *Informazioni di stato:* descrivono l'attuale situazione del SI e per riflesso la situazione dell'azienda, possono essere dati puntuali o derivati da elaborazioni di dati anagrafici e movimenti.
 + *Informazioni anagerafiche:* sono la base della conoscenza organizzativa, descrivono le proprietà fisiche di un'entità fissa nel tempo o molto stabile, e.g. prodotti, macchinari e materiali.
+
 *** Qualità dei dati
 Lo standard ISO 8402-1995 definisce la qualità dei dati come "Il possesso della totalità delle caratteristiche che portano al soddisfacimento delle esigenze, esplicite o implicite, dell'utente".\\
 Gli utenti andranno ad interagire con i dati restituiti dal sistema, la qualità è tanto più alta quanto la rappresentazione dei dati è vicina alla percezione della realtà.\\
@@ -56,6 +62,7 @@ La scarsa qualità dei dati è legata ad un impatti economici e organizzativi ne
 + Difficoltà nell'introduzione di nuove tecnologie e nella modifica di processi.
 + Difficoltà nella costruzione di un data warehouse.
 + Bassa soddisfazione di operatori e utenti finali.
+
 *** Caratteristiche strutturali
 Ogni tipo di informazione operativa ha caratteristiche proprie.
 + *Aggregazione* cioè il grado di sintesi di un'informazione rispetto agli eventi registrati.
@@ -78,3 +85,87 @@ E' l'insieme delle caratteristiche che inficiano sull'utilizzo dei dati all'inte
 + *Precisione:* indica l'approsimazione con la quale sono inseriti i dati, spesso si parla di misure fisiche.
 + *Omogeneità:* richiede che i dati all'interno di una struttura vengano trattati con le stesse funzioni di accesso.
 + *Fruibilità:* è la semplicità con cui un utente riesce a recuperare e comprendere le informaizoni di cui ha bisogno.
+
+** Potenzialità informatica
+Le aziende affrontano lo sviluppo in modo graduale ed in base al rapporto tra costi e benefici.\\
+La potenzialità di un'azienda è data da due fattori:
+1. *L'intensità informativa* con la quale si indica la necessità di informazioni proprie dell'azienda, dipenda dal mercato in cui si opera.
+2. *L'attrattiva informatica* ovvero la facilità ed efficacia dell'informatizzazione nei processi aziendali.
+Bisogna considerare anche quanto è disposto il manager in questo settore.
+
+*** Intensità informativa
+Le anziende hanno tre principali fattori indicatori della necessita di adottare un sistema informativo.
+1. *Complessità*
+   + *Dimensione* più è elevato il numero delle persone che lavorano maggiore è la complessità.
+   + *Area geografica* nella quale opera l'azienda.
+   + *L'appartenenza ad un gruppo* la difficoltà nel coordinare diverse aziende.
+   + *Diversificazione dei prodotti*
+Le aziende con una complessità elevata devono elaborare molti dati e  potrebbero anche decidere di adottare soluzioni organizzaative, anche se questo si dovesse tradurre in un incremento dell'organico.
+2. *Intensità informativa del prodotto:* ovvero il grado di guadagno che si avrebbe informaticizzando un prodotto/servizio, ci sono prodotti che si prestano meglio e prodotti che si prestano peggio. e.g. i numeri telefonici hanno un intensità informativa elevata.
+3. *Intensità informativa del processo:* più è articolato un processo più ha necessità di essere automatizzato, processi lineari hanno un intensità bassa.
+Un buon esempio di diagramma per comprendere l'intensità informativa di un'azienda è il diagramma di Porter-Miller, in cui le ascisse sono l'intensità dei prodotti mentre le ordinate l'intensità dei processi.
+
+[[file:../img/matrice_porter_miller.png]]
+
+*** Intensità informatica
+L'intensità informativa non è sufficente, per questo abbiamo bisogno di un ulteriore indicatore che ci suggerisce quanto sarebbe automatizzabile un processo.
+I parametri da valutare sono:
++ *Proceduralità:* un processo ha diversi gradi di strutturazione, ovvero una sequenza di azioni elementari che servono a completarlo.\\
+  alta proceduralità $\to$ elevata attrattiva informatica
++ *Complessità:* indica la complessità delle azioni da compiere per eseguire un processo.\\
+  alta complessità $\to$ elevata attrattiva informatica
++ *Ripetitività:* se un processo ha una proceduralità elevata è anche molto ripetitivo, overo viene ripetuto svariate volte in un breve lasso di tempo.\\
+  alta ripetitività $\to$ elevata attrattiva informatica
++ *Volume:* la quantità di dati da elaborare.\\
+  alto volume $\to$ elevata attrattiva informatica
+I processi con attrattiva maggiore sono quelli molto procedurali con complessità elevata, che si ripetono nel tempo e con un volume di dati da analizzare molto elevato.
+
+** Composizione dei sistemi informativi operazionali
+Per sistema operazionale si indica l'insieme di tutti i sottosistemi informativi (che trattano l'attività operativa) di un'azienda.\\
+Questi sottosistemi posso essere più o meno integrati tra di loro, questo alimenta la mancanza di uno standard.\\
+Di fatto i sistemi informativi operazionali sono differenti in base al settore in cui opera l'azienda.\\
+Oltre ad una divisione dei sottosistemi i criteri di classificazione variano in base all'aspetto che si vuole considerare: per funzione, per processo, per architettura, ecc.\\
+In passato si usava una classificazione in base al supporto fornito all'area funzionale.\\
+Questo apporccio venne abbandonato quando è emersa la necessità di integrare i diversi sottoinsiemi.
+
+*** Portafoglio operativo
+L'insieme di tutte le applicazioni informatiche legate ai processi /market driven/, ovvero legati al core business..\\
+Tutte le attività coinvolte nella produzione e nella vendita dei prodotti/servizi.\\
+Sono molto variabili al variare del settore di cui ci si occupa, ma anche all'interno dello stesso settore c'è molta varianza tra aziende di dimensioni diverse.\\
+Si deve fare una distinzione anche sul processo produttivo di un'azienda.\\
+E' molto frequente la presenza di software molto specializzato a livello settoriale per quanto riguarda la sua implementazione.
+
+*** Portafoglio istituzionale
+Contiene tutte le applicazioni informatiche realizzate per le attività di sostegno: contabilità, risorse umane, ecc.\\
+Molte di queste hanno un'elevata attrazione informatica, perchè standardizzate da leggi, molto procedurali e ripetitit caratterizzate da semplicità di elaborazione.\\
+Essendo normate dalla legge risulta parecchio simili al variare del settore e per questo il mercato offre molti software che sono standard.
+
+*** Dai sistemi tradizionali agli ERP
+Fino ai primi anni 9'0 le aziende erano divise in isole informatiche, ognuna delle quali soddisfava una particolare funzione aziendale.\\
+Questa situazione era data da:
++ Uno sviluppo incrementale e per aree del SI.
++ Rigidità nella struttura aziendale.
++ I produttori di SW producevano soluzioni molto mirate.
+Sistemi così articolati avevano parecchi problemi nell'ottica dell'intera azienda.
++ I diversi sistemi erano spesso prodotti da aziende diverse con diversi contratti.
++ La divisione in insiemi implicava uno sforzo notevole per mettere in comunicazione gli stessi insiemi.
++ L'autonomia che ogni insieme doveva avere produceva molta duplicazione di dati.
++ Le differenze tra gli insiemi rendeva difficile avere una visione di insieme.
+Da questi disagi nascono gli ERP (Enterprise Resource Planning), il cui principale obbiettivo è la gestione ottimale delle risorse che un'azienda utilizza per svolgere le properie attività.\\
+I nuovi ERP sono sviluppati da una singola software house e condividono una base di dati comune a tutte le sezioni.\\
+Gli ERP sono formati da sottoinsiemi integrati tra di loro dal punto di vista architetturale ma anche da quello virtuale (UI simili).\\
+Gli ERP sono sviluppati a moduli così da dare la possibilità alle aziende di richiedere solo quelli necessari a loro.
+*** Ambiti degli ERP
+Al variare del settore nel quale oper l'azienda restano invariati gli impianti generali degli ERP e le procedure di supporto all'azienda.\\
+I sistemi ERP hanno i seguenti flussi di base:
++ *Amministrativo:* grazie ai vincoli legislativi e agli stadard è uno dei primi ambiti in cui gli ERP hanno operato.
++ *Logistico:* ovvero il trattamento dei materiali e la loro movimentazione.
++ *Attivo o vendite:* la catena di processi che porta l'azienda ad intergaire con i clienti.
++ *Passivo o acquisti:* la catena di processi che fa interagire aziuenda e fornitori.
++ *Produttivo:* flusso opzionale perchè dipendente dal settore in cui si opera, per ridurre complessità gli ERP vendono software specifico per il tipo di mercato.
+*** Sistemi operazionali complementari
+Gli ERP non esauriscono gli aspetti operazionali necessari ad un'azienda.
++ Sistemi di *supporto primario* agli ERP servono a far sviluppare flussi di dati standardizzati alle aziende che non hanno un ERP.
++ Le *estensioni* degli ERP che permettono agli ERP di scambiare dati con l'esterno.
++ I sistemi *tecnici* che risolvono alcuni processi di natura specifica.
++ I sistemi di *dematerializzazione dei documenti*.
