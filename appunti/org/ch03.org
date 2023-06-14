@@ -67,3 +67,62 @@ In questo livello la struttura del team diventa ancora più definita, viene rico
 [[file:../img/figure_professionali_livello_3.png]]
 
 *** Livello 4
+Questo rappresemnta lo strutturamento più complesso, la direzione si struttura con ruoli di supporto quali:
++ Segretaria
++ Pianificatore
++ Privacy e sicurezza
++ Documentazione e standard
++ Gestione budget
+
+[[file:../img/figure_professionali_livello_4.png]]
+
+** Posizionamento nell'organigramma
+Oltre all'identificazione è importante saper posizionare i vari settori all'interno dell'organigramma aziendale.\\
+Si possono identificare tre macro categorie principali, anche se spesso si trovano soluzioni miste.
+*** Supporto amministrativo
+Analogo all'ata amministrazione, ha una visione obsoleta del SI.\\
+Il Si viene considerato solo come una banca dati in chiave quasi esclusivamente amministrativa per misurazione e controllo.
+
+[[file:../img/supporto_amministrativo.png]]
+
+*** Servizio altre direzioni aziendali
+Evoluzione in cui l'IT viene visto come a servizio di tutti, il servizio viene visto come in staff alla direzione generale.\\
+Serve a supporto della direzione nella definizione di processi e nelle analisi dei risultati ottenuti.
+
+[[file:../img/servizio_altre_aree.png]]
+
+*** Servizio all'organizzazione
+Il livello più elevato, viene identificata un'area specifica che si oocupa dell'organizzazione complessiva di un'azienda.\\
+Questo tipo di modello è tipico nelle grandi aziende, le quali sono sensibili alla formazione dei processi organizzativi.
+
+[[file:../img/servizio_all_organizzazione.png]]
+
+** Infrastruttura tecnologica dei SIA
+Si è passati da un modello con unità centrale e molti terminali, ad uno client-server.\\
+Questo passaggio è stato reso possibile grazie alla progressiva apertura verso internet che ha permesso la continua virtualizzazione.\\
+Un SI è formato da diversi componenti generatori ma anche fruitori, come:
++ Stazioni di lavoro
++ Dispositivi mobili
++ Dispositivi IoT
+La normalizzazione di queste tecnologie con l'avanzamento del wireless ha reso possibile il collegamento da un qualsiasi punto geografico.\\
+Questo però non ha portato solo pro, ma anche molti prioblemi come la difficoltà nella gestione delle varie infrastrutture e il crescente bisogno di security in ambiente informatico.
+*** Da server locale a cloud (outsource)
+Con la crescente dusponibilità di internet si è passati ad un modello in cui è rimosso l'investimento in hw e sw per favorire un investimento a canone fisso.\\
+Si va in outsource del SI, viene tutto delegato ad una ditta esterna, questo fa abbassare i costi iniziali permettendo di fatto anche alle PMI di accedere a certi servizi.\\
+C'è un enorme problema però, si è costantemente dipendenti dalla connettività internet.
+** Interrompibilità del servizio
+Il servizio del SI può essere interrotto per svariato motivi, sia hw che sw.
+*** Guasti Hardware
+Per i vari guasti hardware il tempo di ripristino puù diventare troppo lungo, per cui esistono svariate misure di prevenzione:
++ Sistema ridondato con RAID
++ Hot swap dei dischi
++ Sistema fault tolerant per sistemi su cui girano applicazioni "mission critical"
++ Back-up
+*** Guasti software
+Ovviamente, neanche il codice di un SI è perfetto e può essere soggetto a malfunzionamenti.\\
+A questo tipo di errori è imputabile la maggior parte dei malfunzionamenti, comunque questi sono anche i guasti meno gravi perchè raramente bloccano tutto il sistema ma solo un processo o un insieme di attività.
++ Il fornitore deve fornire un servizio di assistenza.
++ L'aziende dovrebbe usare un servizio di back-up con storicizzazione.
+*** Guasti dolosi
+Sono guati particolarmente relativi all'ambiente (bancari e sanitari), possono arrecare interruzioni prolungate del servizio ma anche tipi di danni: furto monetario, di proprietà intelletuale e di segreti aziendali.\\
+Grand parte di questi danni è causata da personale interno o da terzi con accesso alla struttura, è per cui importante installare sistemi di riconoscimento come : password, OTP e lettori biometrici.

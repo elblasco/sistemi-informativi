@@ -1,0 +1,80 @@
+* Sistemi operazionali
+** Finalità dei sistemi operazionali
+Sono SI orientati alla processazione di attività quotidiane, le loro funzionalità basiche sono:
++ Registrare transazioni.
++ Pianificare e controllare operazioni.
++ Acquisizione e organizzazione della conoscenza.
++ Elaborazione della situazione aziendale.
+Il sistema operazionale si deve quindi essere costruito attorno ad una base di dati strutturata e ben ordinata.
+*** Registrazione delle transizioni
+Una transazione è un'azione atomica, che rappresenta una o più azioni basiche che l'azienda ha interesse nel tracciare.\\
+Esistono due tipi di transizioni:
++ *Semplici* registrate all'interno del SI come un singolo dato.
++ *Complesse* composte da una serie di registrazioni elementari collegate tra di loro (spesso correlate a documenti fisici).
+Una transizione non è sempre autocontenuta e può, a sua volta, generare altre transazioni a cascata.\\
+Ogni azienda genera transazioni ma non è obbligatorio registrarle tutte nel SI, dipende anche dal volume di azioni che devono essere registrate.\\
+Il volume dei dati (legati ad una transizione) è direttamente influienzato dalla struttura dell'azienda stessa, perchè più passaggi vengono compiuti più le informazioni legate ad essa crescono, di fattop ogni passaggio è una transazione.
+*** Pianificazione e controllo delle operazioni
+
+[[file:../img/pianificazione_operazioni.png]]
+
+Come visto i processi sono concatenati tra di loro, quindi potremmo usare i dati dei processi a monte per pianificare le attività a valle.\\
+Entra quindi in gioco l'uso dei SI, che rende possibile l'utilizzo di modelli di pianificazione complessi con un monitoraggio continuo dello stato di avanzamento.\\
+Le funzionalità che i processi di organizzazione devono avere sono piuttosto articolate:
++ Elaborare dei piani (ottimizzazione risorse e soncronizzazione dei passaggi).
++ Registrare l'avanzamento delle operazioni.
++ Misurare gli scostamenti rispetto agli obbiettivi.
+*** Organizzazione della conoscenza
+Lo scopo dei sistemi operazionali è l'archiviazione di dati, questi dato, o informazioni di supporto, vengono trattati in modo centralizzato così da fornire a diversi settori aziendali i dati sempre aggiornati.\\
+Le basi di conoscenza aziendali sono:
++ Registrazione delle attività.
++ L'anagrafica (fornitori, clienti e prodotti).
++ Informazioni che correlano le anagrafiche.
+Le informaizoni mantenute in modo centralizzato devono pertanto essere strutturate, cioè riconducibili ad un insieme di caratteristiche prederminate e correlate.
+*** Elaborazione della situazione aziendale
+Dobbiamo pensare ad un SIA come ad un sistema dinamico, gli archivi ne sono la struttura, gli eventi che genarno transazioni gli input e le pianificazioni la parte dinamica.\\
+L'ultima parte modifica lo stato del sistema in base allo stato attuale e agli input.\\
+Conoscere lo stato corrente permette di agire su stime aziendali, tramite appositi eventi, che le guidano nella direzione appropriata.\\
+Gli indicatori di stato posso essere:
++ La giacenza degli articoli.
++ L'elenco degli ordini non evasi.
+** Informazione operativa
+Le informazioni operative vengono mantenute in modo ordinato all'interno di un archivio, che seppur fisicamente sepratato, virtualmente unitario.\\
+Al suo interno si distinguono alcune informazioni omogenee in struttura, gestione e destinazione d'uso:
++ *Movimenti:* sono transazioni semplici e finali come i movimenti in magazzino.
++ *Documenti di processo:* transazioni complesse che tipicamente sono collegate a liste di oggetti utilizzate per definire flussi di azioni.
+  + Testa della coda: informazioni generali della trnsazione.
+  + Righe: dettaglui riferiti ai singoli prodotti.
++ *Informazioni di stato:* descrivono l'attuale situazione del SI e per riflesso la situazione dell'azienda, possono essere dati puntuali o derivati da elaborazioni di dati anagrafici e movimenti.
++ *Informazioni anagerafiche:* sono la base della conoscenza organizzativa, descrivono le proprietà fisiche di un'entità fissa nel tempo o molto stabile, e.g. prodotti, macchinari e materiali.
+*** Qualità dei dati
+Lo standard ISO 8402-1995 definisce la qualità dei dati come "Il possesso della totalità delle caratteristiche che portano al soddisfacimento delle esigenze, esplicite o implicite, dell'utente".\\
+Gli utenti andranno ad interagire con i dati restituiti dal sistema, la qualità è tanto più alta quanto la rappresentazione dei dati è vicina alla percezione della realtà.\\
+In misura ridotta la qualità è influenzata anche dalla progettazione del SI, in modo più specifico da come sono stati strutturati i dati e come il SI viene alimentato.\\
+La qualità può essere inficiata da sottoinsiemmi autonomi e non integrati e la mancanza di un inventario aggiornato nella base di dati.\\
+La scarsa qualità dei dati è legata ad un impatti economici e organizzativi nefasti per l'azienda:
++ Difficoltà nell'introduzione di nuove tecnologie e nella modifica di processi.
++ Difficoltà nella costruzione di un data warehouse.
++ Bassa soddisfazione di operatori e utenti finali.
+*** Caratteristiche strutturali
+Ogni tipo di informazione operativa ha caratteristiche proprie.
++ *Aggregazione* cioè il grado di sintesi di un'informazione rispetto agli eventi registrati.
+  + *Analitica* quando una registrazione corrisponde ad un solo oggetto.
+  + *Aggregata* quando è ottenuta dall'elaborazione di più informazioni.
++ *Tempificazione* fa rferimento all'arco emporale coperto dall'informazione.
+  + *Puntuale* se fa riferimento ad un istante preciso.
+  + *Cumulativa* si rifersice ad un periodo (anche breve come poche ore).
++ *Dimensionalità* ovvero il numero minimo di parametri per estrarre un'informazione.
+  |                       | Aggregazione            | Tempificazione        | Dimensionalità |
+  |-----------------------+-------------------------+-----------------------+----------------|
+  | Anagrafiche           | Analitica               | Puntuali              | Unitaria       |
+  | Movimenti/Documenti   | Analitica               | Puntuali              | Bassa          |
+  | Informazioni di stato | Analitica o aggregativa | Puntuale o cumulativa | >= 2           |
+
+*** Caratteristiche funzionali
+E' l'insieme delle caratteristiche che inficiano sull'utilizzo dei dati all'interno del SI.
++ *Completezza:* l'estensione con cui vengono raccolte e memorizzate le informaizoni, si riferisce sia ad oggetti singoli sia ad un insieme di essi.
++ *Correttezza:* è la corrispondenza tra dato è realtà, è condizionata dalla possibilità di inserire dati errati.
++ *Precisione:* indica l'approsimazione con la quale sono inseriti i dati, spesso si parla di misure fisiche.
++ *Omogeneità:* richiede che i dati all'interno di una struttura vengano trattati con le stesse funzioni di accesso.
++ *Fruibilità:* è la semplicità con cui un utente riesce a recuperare e comprendere le informaizoni di cui ha bisogno.
