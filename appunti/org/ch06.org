@@ -1,0 +1,89 @@
+* ERP: l'area logistica
+** Obbiettivi
+Questa parte del SI si occupa principalmente di:
++ Definire caratteristiche gestionali.
++ Controllare la movimentazione degli articoli.
++ Analisi di disponibilità.
++ Fornire valutazioni inventoriali.
+Nei sistemi più evoluti
++ Identificare le ubicazioni fisiche dei prodotti.
++ Tracciare le origini dei prodotti.
++ Operare con movimentazioni automatiche.
+** Struttura di base
+La struttura di base su cui si basa la logistica sono:
++ Le anagrafiche dei prodotti.
++ Il layout aziendale.
++ La movimentazione.
+*** Nominazione articoli
+Le aziende devono passare per un piano di codifica, nel quale vengono definite un insieme di caratteristiche che (nell'universo aziendale) permettono di identificare unu articolo.\\
+La codifica semplice può essere fatta in due modi:
+1. *Lineare:* una semplice stringa di lunghezza fissa con cartteristiche comuni a tutti gli articoli.
+2. *Condizionata:* una stringa di lunghezza variabile in cui l'attributo $x$ è influenzato dall'attributo $x-1$.
+Le codifiche possono essere parlanti (con codici umanamente capibili) oppure strutturata (concisa ma capibile solo dalla macchina).
+*** Anagrafiche dei prodotti
+I SI raggruppanio le informazioni dei singoli prodotti, le informaioni possono essere:
++ *Base:* codice, descrizione, imballaggio e gestione.
++ *Approvvigionamento e produttive:* lead time, scorta minima e livello di riordino.
+*** Layout aziendale
+Per il SI che si occupa di questa area è molto importante conoscere il layout aziendale.\\
+Può così categorizzare l'ubicazione degli articoli, in magazzini interni o esterni, di propretà o di terzi.\\
+L'azienda potrebbe anche avere un insieme di politiche da adottare per ogni cateforia di oggetto, come codice, descrizione e valorizzazione.
+*** Movimentazione logistica
+Il Si deve gestire tutti i movimenti che vanno ad alterare lo stato dei magazzini, questi comprendono ingressi e uscite per svariate ragiorni.
+** Procedure di base
+I SI offrono proceduire di base per il controllo anagrafico e procedure di alimentazione.\\
+Le procedure di alimentazione sono:
++ *Interattive*
++ *Basate sui flussi operativi*
+  + Ingressi/uscite merci
+  + Produzione
++ *Basate sui flussi di controllo*
+  + Verifiche inventoriali
+  + Invetari a rotazione
+Il SI fornisce anche procedure di analisi e controllo:
++ Analisi di giacenza di articoli.
++ Disponibilità degli articoli\\
+  $G$ = giacenza\\
+  $R$ = richieste\\
+  $C$ = copertura
+  \begin{equation*}
+        D=G-R+C
+  \end{equation*}
++ Generazione dell'invetario.
++ Generazione della scheda degli articoli.
+** Flussi evolutivi
+I SI più evoluti offrono molte funzioni per il trattamento della logistica, ma in casi particolari si preferisce affidarsi a software specializzato.\\
+Nel seguito si vedranno tre tipologie di magazzini gestibili con un ERP.
+*** Magazzino a lotti
+I lotti suddividono gli articoli per informazioni comuni legate alla movimentazione.\\
+Questa tecnica si usa per prodotti molto impattanti sul mercato, questo perchè è possibile risalire a tutta la filiera produttiva.\\
+Sono necessarie:
++ Informazioni di nominazione.
++ Informazioni logistiche.
++ Informazioni di stato.
++ Informazioni di tracciabilità.
++ Informazioni fisiche.
+Esistono delle procedure per l'alimentazione del magazzino a lotti:
++ Ricezione dei materiali e quindi creazione lotti.
++ Spedione e quindi chiusura totale/parziale dei lotti.
++ Controllo qaulità e quindi movimentazione dei lotti.
++ Creazione di punti intermedi con chiusura e successiva rapertura dei lotti.
++ Movimentazione interna dei lotti.
+Procedure di analisi e controllo:
++ Lotti in scadenza.
++ Stati dei lotti.
++ Tracciamento.
+*** Magazzino a matricole
+I SI fanno differenza tra numeri di serie e matricole.
++ *Numero di serie:* intervalli numerici collegati univocamente a insiemi di articoli.
++ *Matricola:* numero che collega articolo a movimentazione, è indispensabile per esplicitare ogni singolo elemento mosso.
+  Svincola quindi dall'uso di lotti.
+Le strutture di riferimento e le funzioni di controllo sono analoghe a quelle dei magazzini a lotti.
+*** Magazzino a celle
+Normalmente la posizione di un articolo all'interno di un magazzino è statica e quindi definita dalla sua ubicazione.\\
+In un magazzino a celle questa staticità non vale, può quindi cambiare nel tempo e ammettere dispersioni degli articoli in posizioni diverse del magazzino.\\
+Il modello del magazzino deve perciò essere definito come un insieme di coordinaten spaziali, le quali definiscono la posizione della cella di un oggetto.\\
+Per trattare magazzini di questo tipo i SI devono mettere a disposizione fuinzioni per la movimentazione che ottimizzano lo spazio percorso.
+*** Magazzini automatici
+Sono gestiti da sistemi specializzati che interagiscono con la parte logistica del ERP.\\
+La movimentazione può essere totalemnte automatica oppure avere delle parti manuali nello scarico e carico.
