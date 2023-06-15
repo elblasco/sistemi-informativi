@@ -80,3 +80,22 @@ Un altro modo di alimentazione automatica è il ribaltamento.
 Il sistema fornisce un insieme di procedure autonome per analizzare e controllare i dati, solitamente elaborano la movimentazione elementare per intervalli di tempo.
 *** Budget
 Il budget definisce delle previsioni sugli andamenti aziendali, viene sviluippato sulla parte economica del piano dei conti ordinari o nel piano dei conti di analitica.
+**** Procedure di alimenatazione
+Solitamente il sistema di budget può essere alimentato in maniera manuale o semiautomatica.\\
+La modalià manuale consiste solamente nell'inserimento manuale di entry, mentre in modalità semiautomatica si ha un maggior aiuto da parte del sistema.\\
+I sistemi più raffinati hanno una fase di alimentazione più complessa, si parte da un piano vendite storico e in base a dei meccanismi correttivi si passa ad un calcolo di costi diretti/indiretti.
+**** Procedure di analisi e controllo
+Sono incluse delle procedure di analisi e controllo, solitamente l'elaborazione dei movimenti elementari è divisa in intervalli di tempo
+*** Controllo di gestione
+E' un argomento molto ampio e complesso, spesso diviso in sottoinsiemi autonomi e dedicati.\\
+L'obbiettivo è offrire una visione dell'andamento aziendale prima che i docuemtni contabili vengano chiusi.\\
+Questo controllo è spesso trattato con due metodi, spesso integrati:
+1. *Conto economico organizzativo:* confronta reddittività del singolo cliente e prodotto.
+2. *Confronto budget e consuntivi:* confronta per ogni periodo di analisi i valori previsti nel budget con quelli consuntivi.
+**** Cespiti
+Il costo per l'acquiesto dei beni materiali o immateriali deve essere scaricato sul conto economico al raggiungimento degli obbiettivi aziendali.\\
+Questi periodo di scarico sono generalmente più lunghi e che idealmentre rispecchiano la vita del prodotto.\\
+I SI supportano la maggior parte delle procedure per il trattamento dei cespiti e della documentazione fiscale connessa.
+**** Compensi a terzi
+Quando un'azienda richiede servizi a terzi, questi addebitano all'azienda delle fatture.\\
+Le procedure sono copmplicate da particolarità legate a normative o dal punto di vista operativo.
