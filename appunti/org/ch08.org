@@ -1,0 +1,37 @@
+* ERP: l'area acquisti
+** Obiettivi
+Si occupano principalmente di definire le caratteristiche di prodotti, fornitori e servizi.\\
+Nei sistemi più evoluti oltre a queste funzioni di base esistono procedure per trattare quanto avviene nel settore vendite (flusso attivo).
+** Strutture di base
++ Anagrafiche commerciali dei prodotti e fornitori
++ Le strutture per listini e sconti
++ I documenti che registrano i fenomeni di transazione
+*** Anagrafiche commerciali
+**** Fornitori
+I fornitori si distinguono in tre categorie: di materiali, di lavorazioni e di trasporti.\\
+Ad ogni fornitore sono associate le informazioni commerciali oltre a quelle anagrafiche di base.
+*** Condizioni commerciali
+Sono molto più semplici di quelle nei flussi attivi, devono solo contenere prezzi d'acquisto e sconti associati.
+**** Listini d'acquisto
+Un obbiettivon è registrare l'evoluzione dei prezzi nel tempo, l'unica complessità è data dai dall'esistenza di prezzi a scaglioni analoghi a quelli del flusso attivo.
+**** Sconti
+Sono simili a quelli del flusso attivo, sono modelizzabili tramite un albero decisionale.
+*** Documenti di processo
+**** Struttura dei documenti di processo
+Come nel flusso attivo i docuemtni sono formati da una testam delle righe e un piede.
++ *Testa:* i dati comuni all'intero documento
+  + Identificazione: protocollo, data inserimento, data conferma.
+  + Identificazione fornitore
+  + Condizioni commerciali: valuta , modalità di pagamento
+  + Spedizione: tipo di trasporto
+  + Dati generali: tipo di movimentazione logistica, movimentazione contabile e IVA
++ *Righe:*
+  + Identificatori della riga
+  + Identificatori prodotto o servizio
+  + Spedizione
+  + Logistica
+  + Amministrazione
++ *Piede:*
+  + Condizioni commerciali: i vari sconti
+  + Totalizzatori: totale documento, totale IVA e scadenza del pagamento
+** Procedure di base

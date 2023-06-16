@@ -1,1 +1,117 @@
 * ERP: l'area vendite
+** Obiettivi
+Gestie le caratteristiche commerciali dei prodotti e dei clienti e di fornire un supporto informativo per le funzioni operative.\\
+Nei sitemi più evoluti sono presenti funzioni per gestire:
++ Gruppi d'acquisto
++ Ordini aprti
++ ecc.
+** Strutture di base
+Le strutture di quale si avvale sono:
++ Le anagrafiche di clienti e prodotti
++ Le strutture dati come listini, scontistiche e rapporti
++ I documenti di processo
++ I piani di processo come i piani di spedizione e di fatturazione
+*** Anagrafica commerciale
+**** Clienti e contatti commerciali
+Sono le informazioni di natura commerciale erlative ai clienti.
+**** Prodotti in vendita
+I prodotti in vendita, si dividono in due categorie: prodotti fisici e servizi.
+*** Condizioni commerciali
+Sono tutte le relazioni che regolano i rapporti commerciali, i listini, le condizioni di scontistiche e le condizioni di agenzia.
+**** Listini di vendita
+Sono la colezione dei prezzi degli articoli e degli elementi che ne concorrono alla modifica, come:
++ Il cliente
++ L'articolo
++ La valuta
++ La data nella quale viene effetuata la valutazione
+I SI più semplici permettono una definizione tabellare del listino, mentre quelli più evoluti permettono di definire un algoritmo per inserire le scelte operative.\\
+In generale questi algoritmi scendono un albero decisionale, oppure ad un livello superiore anche un grafo orientato.
+
+[[file:../img/albero_listino.png]]
+
+I listini sono soggetti a non poche complicazioni.
++ Il prezzo espresso come una maggiorazione/diminuzione rispetto ad un altro anzichè come valore puro.
++ Definizione a scaglioni.
++ Alta varianza in termini temporali.
+**** Condizioni di scontistica
+Molte aziende preferiscono operare con listini semplici ma condizioni di sconto complesse, difficilmente si vedono sistemi misti.\\
+Gli elementi che influenzano lo sconto:
++ Cliente
++ L'articolo
++ la data in cui ci si trova
+La lista delle scontistiche poù incorrere in complessità se:
++ Si verificano più scontistiche a cascata
++ Gli sconto sono definit a scaglioni
++ Si utilizzano sconti composti
+**** Condizioni di agenzia
+Definiscono i rapporti con chi fa da intermediario rta il cliente e l'azienda nelle vendite.\\
+La logica di base è simile a quella dei listini e delle scontistiche, però qua gli elementi astatti in gioco sono più numerosi.\\
+Le condizioni sono legate a: clienti, articoli e modalità di pagamento.\\
+Come nei precedenti casi ci possono essere degli elementi che fanno aumentare la complessità:
++ Applicazione a cascata di provifioni.
++ La definizioni di scaglioni per le provigioni.
+*** Documenti di processo
+Tutti i docuemtni di processo hnno una struittura simile, si differenziano solitamente da dati non utilizzati o non definiti.
+**** Testa dei documenti
+I dati fondamentali dei docuemtni possono essere scomposti in base alla collocazione logica
++ *Identificazione documento:* protocollo, data di inseriemnto e conferma, stato, ecc.
++ *Identificazione cliente:* cliente di riferimento, indirizzi aggiuntivi, id del cliente
++ *Condizioni commerciali:* cliente da fatturare, valuta, moalità di pagamento, ecc.
++ *Spediozione:* tipo di trasporto, aspetto esteriore del bene, ecc.
++ *Dati generali:* tipo di movimentazione logistica, tipo di IVA, ecc.
+**** Righe dei documenti
+Sono i dati ripetuti e quindi più numerosi negli arhivi.
++ *Identificatori riga:* numero di riga, stato della riga, ecc.
++ *Identificatoti del prodotto in vendita:* codice articolo, codice commerciale, ecc.
++ *Spedizione:* colli, data di consegna, ecc.
++ ecc..
+**** Piedi del docuemento
+Sono i dati totalizzanti, che posso essere estrapolati solo a valle della definizione.
++ Testi od oggetti allegati
++ Condizioni finali
++ Sconto complessivo
++ Sconto finanziario
++ ecc.
+*** Piani di processo
+I piani di processo sono raggruppamenti in righe dei docuemtni usati per definire in blocco altri documenti utili.
+**** Piano di spedizione
+Definisce una spedizione di prodotti che vanno mobilitati in un unico passaggio.
+**** Piano di fatturazione
+Raggruppa tutte le righe dei DDT in un unico passaggio, anche in questo caso gli ERP mettono a disposizione delle funzioni apposite per la creazione.
+** Procedure di base
+Le procedure di base al supporto delle vendite sono di due tipi, quelle che supportano il flusso esecutivo e quelle che forniscono le principali analisi.
+*** Procedure di flusso
++ *Preventivazione*
++ *Raccolta ordini:* via diretta, differita o online
++ *Spedizione:*
++ *Fatturazione:* concettualmente automatico ma altamente critico.
+*** Procedure di analisi
+Tutti i sistemi ERP mettono a disposizione strumenti di reporting per analizzare il flusso attivo.\\
+Solitamente gli elementi analizzati sono : ordinato, fatturato e marginalità.
+** Flussi evolutivi
+In molti casi i processi di base non sono sufficienti a supportare le esigienze di un'azienda, sopratutto se l'azienda opera nella grande distribuzione.\\
+Quando le esigenze informative sono spinte l'azienda si muove verso soluzioni verticali.
+*** Condizioni commerciali
++ *Gruppi d'acquisto*
++ *Accordi quadro*
+  Vengono stabiliti dei prezzi, condizioni di sconti, premi per vendite.
++ *Orini aprti*
+  Sono ordini che si trovano a monte, articoli che il cliente si è impeganto a comprare.
+*** Processi
++ Controllo e validazione
++ Outsourcing delle spedizioni
++ Meccanismi alternativi di emissione dei documenti
+*** Estensioni degli ERP
+Negli utlimi tempi si è creato il termine ERP II.\\
+Riconoscendo una nuova fase, nella quale gli ERP dialogano sempre di più con servizi esterni.
+**** CRM
+Trattano e organizzano i dati dei clienti e prospect.
++ Allargare il portafoglio dei clienti.
++ Conoscere il mercato e i bisogni.
++ Mantenere traccia delle attività.
++ Fidelizzazione clienti.
+I sistemi CRM interagiscono con gli ERP nei punti estremi del flusso attivo.\\
+I dati raccolti sono estremamente strategici per le aziende.
+**** E-commerce
+E' un canale aggiuntivo e parallelo alla vendita, svincola dalla presenza di un operatore intermedio.\\
+Spesso gli e-commerce fungono sia da B2B a B2C.
