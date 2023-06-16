@@ -1,0 +1,103 @@
+* ERP: l'area produttiva
+** Obiettivi
++ Il trattamento dei processi di definizione del prodotto
++ La pianificazione della produzione
++ Il trattamento dei processi di produzione
++ La prevenziopne e la consunticazione dei costi di produzione
+** Concetti generali
+In azienda il termine /sistema produttivo/ indica l'insieme delle risorse conivolte nalla produzione.
+*** Criteri di classificazione
+Esistono diversi criteri per classificare un sistema di produzione.
++ Tipo di processo
+  + Processi diretti
+  + Processi continui
+  + Processi ibridi
++ Elementi prodotti
+  + Elementi unitari
+  + Bassi volumi
+  + Medi volumi
+  + Alti volumi
++ Tempo di risposta dell'aziena alla domanda
+  + Produzione per magazzino (Make to Stock MTS)
+  + Assemblaggio su ordine (Assemble to Order ATO)
+  + Produzione su Ordine (Make to Order MTO)
+  + Acquisto su ordine (Purchase to Order PTO)
+  + Progettazione su ordine (Engineer to Order ETO)
+
+[[file:../img/tempo_risposta_produzione.png]]
+
+**** Sistemi di pianificazione delle risorse
+La crescente competitività ha creato la necessità di organizzare sempre meglio l'azienda.\\
+Si sono creati due metodi:
+1. MRP (Material Requirement Planning)
+2. MRP II (Manufacturing Resource Planning)\\
+   Non ci limita a considerare la sola richiesta di materiali ma tutte le risorse del sistema aziendale.\\
+   Alcuni blocchi di MRP II sono informatizzati (MRP, CRP, ecc.) mentre altri, come la pianificazione strategica possono non esserlo.
+*** Logiche organizzative dell'azienda
++ *Decisioni a lungo termine:* strategie prese dall'alta direzione, definisce le strategie nel lungo termine da un putno di vista generale, di marketing e di produzione.
++ *Decisione a breve /medio termine:* di competenza del management intermedio, si analizza la domanda (Demand Management), si pianifica l'aggregazione dei carichi e si stila un piano principale di produzione (Master Produxtion Schedule MPS)
++ *Decisioni operative:* si occupano del breve periodo e vengono prese dalla fascia operativa dell'azienda.\\
+  Il primo passo è l'analisi del fabisogno dei materiali (Material Requirement Planning MRP), analisi delle risorse produttive (Capacity Requirement Planning CRP) ed infine la stesura del piano operativo di produzione con richiesta di aiuto o produzione.
+** Strutture di base
++ Le strutture di tipo anagrafico che identificano l'organizzazione del prodotto
++ Le strutture che ospitano i costi preventivi e consuntivi della produzione
++ Le strutture di tipo dinamico che mappano l'evoluzione del processo
+*** Strutture anagrafiche
+**** Distinta base
+Il prodotto è rappresentato come uno schema gerarchico ad albero, la radice è formata assemblata con i nodi ad essa collagata, si prosegue così in modo ricorsivo fino alle foglie.\\
+Le foglie sono i materiali da acquistare.
+
+[[file:../img/distinta_base.png]]
+
++ *Testa della distinta base:* codice e descrizione del padre, ecc.
++ *Righe della distinta base:* codice e descrizione del componente, ecc.
+**** Ciclo produttivo
+Associaton alla distinta base, ogni sistema informativo permette di definire il ciclo produttivo per trasformare i componenti nella radice della base distinta.
+
+[[file:../img/ciclo_produttivo.png]]
+
+Di base sono presenti tutte le informazioni basilari: lavorazione, risorse impegnate, tempi di utilizzo, ecc.
+**** Layout di fabbrica
+Si intende la descrizione della struttura organizzativa delle risorse.
+**** Calendari
+I calendari indicano i giorni lavorativi e i turni a loro associati, permettono di calcolare disponibilità di ogni risorsa.
+*** Strutture costi
+Lo schema generale a cui si fa riferimento è il /roll-up/ dei costi, ovveri si sommano in modo ricorsivo i costi dalle foglie alla radice.\\
+Molti SI implementano anche il /roll-over/ dei costi, in cui il costo si ottiene da dati esterni risoetto alla distinta base.
+*** Dati dinamici
+Sotto questo nome ricadono le strutture che tracciano il comportamento della produzione.
+**** Ordini di produzione
+Gli ordini di produzione (OP) hanno una struttura simile alle operazioni relative ai materiali, quindi con testa e righe.
++ *Testa:* id e tipo di OP, tipo di processo, ecc.
++ *Righe:* Articolo, data prelievo, ecc.
+**** Ordini di lavorazione
+L'ordine di lavorazione (OL) è la struttura che contiene le operazioni di produzione relative alle fasi operative, con una struttura testa-righe.
+** Procedure di base
++ Trattamento anagrafico di base
++ La generazione, manutenzione e consunzione delle commesse produttive per materiali e lavorazioni
++ L'analisi delle commesse e dei costi collegati
+*** Procedure di trattamento materiali
+Il modello ottimale inizia con l'analisi della domanda e la funzione MPS, l'analisi MPR attinge le richieste direttamente dagli ordini oppurtunamente filtrati.
+**** Definizione MPR
+Il sistema MPR genera un piano di produzione che è l'insieme degli OP necessario a coprire le richieste indipendenti.\\
+L'operatore può:
++ Spostare alcune richieste indipendenti.
++ Modificare i lead time.
++ Modificare i valori di scorta.
+*** Procedure di trattamento lavorazioni
+**** Lavorazioni interne
+Le lavorazioni interne vengono pianificate attraverso la procedura CRP nei seguenti modi:
++ CRP a capacità infinita basato su lead-time
++ CRP a capacità infinita basato sui tempi tecnici
++ CRP a capacità finita
++ CRP a capacità finita con ottimizzazioni
+Le lavorazioni interne proseguono con i seguenti passaggi:
++ Emissione della bolla di lavorazione
++ Emissioni di altra documentazione associata alle singole fasi
++ Avanzamento delle fasi
+**** Lavorazioni esterne
++ *C/lavoro di livello*
+  + Si emette un documento di trasporto ricavato dall'OCL
+  + Il materiale esce e arriva al terzista
+  + Il terzista esegue OCL
+  + Il materiale lavorato rientra
