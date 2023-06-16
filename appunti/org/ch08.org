@@ -35,3 +35,38 @@ Come nel flusso attivo i docuemtni sono formati da una testam delle righe e un p
   + Condizioni commerciali: i vari sconti
   + Totalizzatori: totale documento, totale IVA e scadenza del pagamento
 ** Procedure di base
+Le procedure di base sono divise in due blocchi principali: quelle di supporto al flusso esecutivo e quelle che forniscono le analisi operative.
+*** Procedure di flusso
+Sono elencate nell'ordine cronologicon in cui vengono eseguite: richiesta d'acquito, preventivazione, emissione ordini, ricezione materiali e controllo fatture.
+*** Procedure di analisi
+Le analisi che i sistemi ERP offrono sono analoghe a quelle sui flussi attivi, reporting ordinato per vari campi.\\
+Date lòe richieste molto mutevoli, vengono utilizzati dei sistemi informazionali con metodologie di data warehousing.
+** Flussi evolutivi
+Il flusso acquisti (passivo) ha problematiche simmetriche rispetto al flusso attivo, soprattutto se l'azienda ha attività prettamente commerciali o se opera nella grande distribuzione.
+*** Condizioni commerciali
+**** Gruppi d'acquisto
+Se l'azienda aderisce ad un gruppo d'acquisto parte degli acquisti dovrà seguire le direttive date dal capo gruppo.
+**** Accordi quadro
+Che siano essi legati ad un gruppo di acquisto o trattati autonomamente.
+**** Ordini aperti
+In modo simmetrico alle vendite, questi ordini definiscono quello che l'azienda si è impegnata a comprare.
+*** Processi
+**** Validazione
+Legata a due lemenete: la tipologia di acquisti e l'entità di essi.\\
+Ci sono gerarchie a buyer autorizzati e firme digitali.
+**** Controllo qualità
+Dopo aver superato un controllo quantitativo si va in un deposito "accettazione" nel quakle vengono fatti controlli qualitativi approfonditi.\\
+Gli ERP spesso estrapolano delle valutazioni sui fornitori, ovvero una stima sulla loro qualità considerando la puntualità e la conformità degli articoli.
+** Estensioni dell'ERP
+*** SCM
+La sincronizzazione tra fabisogno dell'azienda e disponibilità dei fornitoriè un punto delicato.\\
+Esistono pertanto le SCM (Supply Chain Management), ovvero una catena di fornitura composta da più aziende coinvolta in un unico processo virtuale.
+*** E-procurement
+Un esempio è il CONSIP per gli appalti pubblici, solitamente gli ERP si interfacciano ad essi tramite servizi web.\\
+Sono simmetrici agli e-commerce, forniscono funzioni per:
++ Analizzare il fabisogno di acquisto
++ Gestire le gare
++ Interagire con i fornitori
+Mentre ai fornitori permettono di:
++ Gestire le proprie offerte
++ Aggiornare lo stato dell'ordine
