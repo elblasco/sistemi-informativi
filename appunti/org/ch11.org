@@ -37,3 +37,51 @@ Ovviamente le informazioni operazionali differiscono di molto da quelle informaz
 + *Storicità dei dati:* vengono mantenute le informazioni con un arco temporale maggiore.
 + *Dettaglio:* servono informazioni aggregate, è preferibile che esistano diversi livelli di aggregazione, dalla sintesi massima al dettaglio massimo.
 + *Tipo di accesso:* è solitamente in sola lettura con aggiornamenti applicati nei periodi di inattività.
+*** Modello multidimensionale
+Uno stesso evento può essere analizzaato mettendolo in relazione con diversi soggetti, da questa visione si intuisce che un dato può essere rappresentato come un punto in un /ipercubo/.\\
+All'interno di quiesti ipercubi i punti verranno chiamati /fatti/ mentre le coordinate /misure/, inoltre le coordinate di ciascun elemento costituisono le /dimensioni/ di analisi dai fatti.
+**** Fatti
+Sono gli eventi che accadono all'interno dell'azienda e si ha interessa a misurare.\\
+Ogni fatto ha:
++ Attributi che lo collocano nel tempo
++ Almeno un dato numerico
++ Informazioni descrittive
+Un fatto è quindi identificato univocamente da una ennupla di coordinate.
+**** Misure
+Sono caratteristiche numeriche del fatto che ne descrive aspetti quantitativi rilevanti per l'analisi.\\L
+Le misure possono essere:
++ *Effettive:* contenute nella base di dati informazionale
++ *Calcolate:* a run time utilizzando i valori già presenti
+I fatti elementaripossono essere aggregati, ovvero si può ottenere un insieme di dati sintetici raggruppando le misure con caratteristiche comuni.\\
+Il processo di aggregazionen è fatto con appositi operatori com: somma, media, max, min, ...\\
+Gli operatori devono essere scelti con attenzione, esistono infatti operatori aggregabili in alcune dimensioni e non su altre.\\
+Il caso più comune è l'aggregabilità con l'operatore somma detta /additività/.\\
+Le misure possono quindi essere divise in:
++ *Misure di livello:* che esprimono valori propri del fatto nel momento in cui è registrato.
+  Non sono mai additive rispetto alla dimensione del tempo.
++ *Misure unitarie:* ovvero i valori relativi a dei soggetti, valido nel momento in cui viene registrato.
+  Non sono mai additive.
++ *Misure di flusso:* valori propri del fatto rapportati ad un intervallo temporale di riferimento.\\
+  Additive lungo qualsiasi dimensione.
+Esiste infine una categoria speciale di misure, le /misure proprie/.\\
+Queste sono tutte le misure di cui ci interessa è che siano verificate o meno, quindi la presenza/assenza del fatto.\\
+Solitamente si esprimono con valori booleani oppure 0/1.
+*** Caratteristiche strutturali
++ *Multidimensionalità:* ovvero il numero di parametri che occore fornire per poter estrapolare un'informazione specifica.
++ *Granularità:* il grado di aggregazione delle informazioni, se l'ipercubo ha granularità minima significa che ogni fatto corrisponde ad un solo dato di origine.\\
+  Spesso per limitare le dimensioni del warehouse i dati hanno già un'aggregazione di base.
++ *Arco temporale:* il periodo temporale coperto dai dati presenti nel warehouse.
++ *Profondità storica:* i dati possono variare nel tempo, questo parametro identifica quante informazioni storiche su un parametro si posseggono.
+*** Caratteristiche funzionali
++ *Integrazione dei dati:* la coerenza che hanno dati provenienti da diverse applicazionie da differenti basi di dati.
++ *Accessibilità:* facilità d'uso e velocità di risposta.
++ *Flessibilità e sintesi:* capscità di assecondare l'utente nel fare le richieste, mettere in relazione misure con criteri non prefissati.
++ *Correttezza:* aderenz<a con la realtà.
++ *Completezza:* la capacità di rappresentare tutti gli eventi importanti, si riferisce sia alle istanze dei dati sia al modello.
+*** Data warehouse e data mart
+Il data warehouse è definito come il magazzino unico, completo e consistente delle informazioni aziendali.\\
+Contiene articoli di interesse aiendali dai quali è possibile estrarre gli ipercubi, per questa sua utilità può raggiungere dimensioni molto elevate.\\
+Operare sull'intero data warehouse sarebbe impensabile, vengono così introdotti i /data mart/, ovvero dei piccoli data warehouse tematici limitati ai fatti che riguardano un'area.\\
+I data mart possono essere definiti con particolari proprietà:
++ Estensioni temporali ridotte.
++ Granularità minore.
