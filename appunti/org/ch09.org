@@ -101,3 +101,38 @@ Le lavorazioni interne proseguono con i seguenti passaggi:
   + Il materiale esce e arriva al terzista
   + Il terzista esegue OCL
   + Il materiale lavorato rientra
++ *C/lovaoro di fase* \\
+  Situazione più complessa che tratta un ciclio con un'unica fase all'esterno.\\
+  Nelle fasi intermedie il materiale che entra/esce non è determinato a livello OP e non è ben definito in anagrafica.\\
+  I processi in entrata/uscita sono complicati dal tentativo di identificazione corretta dei materiali.
+*** Procedure di manutenzione
+**** Procedure di analisi
+L'effettivo avanzamento di OP e OL con valutazione di risorse e materiali.
+**** Procedure di controllo
+Controllo costi con /roll-up/ su OP e OL.
+** Flussi evolutivi
+*** Pianificazione a medio/lungo termine
+Necesseria nelle organizzazioni più complesse, molti sistemi utilizzano moduli specifici per gestire l'analisi della domanda oppure usano l'analisi aggregata dei carichi.
+*** Schedulatori di produzione
++ Pianificazione di produzione giornaliera
++ Definire le sequenze ottimali di lavorazione
++ Valutare i piani elaboratori
++ ecc.
+*** Rilevazione automatizzata dei dati da campo
+*** Commesse cliente/impianto
++ Anagrafica
++ Dati generali
++ Dati amministrativi
++ Dati tecnici
+  + Articoli non codificati
+  + Lavorazioni non codificate
+  + Costi generici
+  + ecc.
++ Sottocommesse
++ Commesse produttive associate
++ Valori associati
+*** Sistemi tecnici
+I sistemi, che a vari livelli, interagiscono con gli ERP.
++ Sistemi per il trattamento e manutenzione degli impianti.
++ Sistemi per la progettazione come CAD.
++ Sistemi per l'automazione.
