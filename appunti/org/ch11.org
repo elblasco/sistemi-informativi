@@ -1,0 +1,39 @@
+* Sistemi informazionali
+** Obiettivi
+I sistemi operazionali hanno fatto nascere l'esigenza di nuovi strumenti per i livelli dirigenziali dell'azienda.\\
+I sistemi operazionali hanno dei grandi limiti per quanto riguarda la reportistica:
++ I dati estratti sono molto statici.
++ La difficoltà e la lentezza dei processi di interrogazione
++ L'incompletezza
+I vantaggi dell'essere altamente customizzabili permettono di ospitare molti tipi di dato, porta molto overhead nei fogli di calcolo:
++ La macchinosità dell'strazione dei dati
++ Lo scarso controllo sui dati
++ Molti strumenti di calcolo personalizzati e incontrollati
++ L'enorme complessità strutturale
+Oltre a tutto questo i sistemi operazionali non sono ottimizzati per analizaare enormi quantità di dati e ottimizzano le procedure interattive.\\
+I sistemi informazionali devono pertanto mettere a disposizione dell'utente un ambiente in cui analizzare i dati sia facile.
++ La base di dati deve comprendee l'intero insieme dei dati interessanti per l'azienda.
++ I dati devono essere riorganizzati per supportare al meglio le attività di analisi.
++ La base di dati deve essere strutturata in modo semplice
++ Le fonti dei dati devono essere integrate
++ Devono essere disponibili strumenti di analisi
++ Gli strumenti di analisi devono sopportare grabndi moli di dati
+** Concetti generali
++ *Data warehouse:* è la base dei dati informazionali
++ *Data warehousing:* è l'insieme delle attvità che definiscono, costruiscono e menatengono la struttura
++ *Decision Support System (DSS):* i sistemi informatici che aiutano nel processo decisionale come il supporto all'estrazione delle informazioni
++ *Data Minig:* l'insieme degli strumenti e delle tecniche usate per estrarre dati "nascosti"
++ *Business intelligence:* l'insieme delle attività volte a estrarre informazioni dai dati di business come quelli genarti dai processi operativi
++ *Knowledge management:* i sistemi di gestione della conoscenza aziendale che non è mantenuta solo dai dati strutturati/strutturizzabili
++ *Big Data:* sono i flussi continui di informazioni non generate dai processi, e che non richiedono costi aggiuntivi,per essere generate.\\
+  Il trattamento di questi dati ammette soluzioni diverse con elaborazione distribuita e algoritmi complessi.\\
+  Si è passati dal dato che permette di osservare gli andamenti al dato dato che può essere usato come materiale.
+** Caratteristiche dei dati informazionali strutturati
+Ovviamente le informazioni operazionali differiscono di molto da quelle informazionali, come per esempio in:
++ *Finalità:* fonrire al management il substrato di informazioni per conoscere l'azienda.\\
+  Descrivere il passato per aiutare a identificare i problemi e le loro cause, suggerire i cambiamenti da apportare per evitarli.
++ *Struttura:* i dqti sono articolati attorno a funaioni, procedure e eventi.
++ *Utenza e struementi:* sono utilizzati prevalentemente da personale esecutivo e manager.
++ *Storicità dei dati:* vengono mantenute le informazioni con un arco temporale maggiore.
++ *Dettaglio:* servono informazioni aggregate, è preferibile che esistano diversi livelli di aggregazione, dalla sintesi massima al dettaglio massimo.
++ *Tipo di accesso:* è solitamente in sola lettura con aggiornamenti applicati nei periodi di inattività.
