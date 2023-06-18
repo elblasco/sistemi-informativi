@@ -94,3 +94,61 @@ E' costituita dai seguenti passaggi:
 + *Progettazione concettuale degli schemi:* identificare misure, dimensioni ed eventuali limiti di aggregabilità.
 + *Progettazione logica:* decisione su schemi a stella/fiocco di neve e la necessità di costruire viste materializzate o ipercubi con molta aggregazione.
 + *Alimentazione:* le procedure che straggono i dati dalle sorgenti e li processano per prepararli al DWH.
+** Popolamento del data warehouse
+*** Fasi di popolamento
+**** Estrazione dei dati
+I dati vengono estratti dalle diverse fonti, viene definito quali dati devono essere acquisiti (tabelle e campi) e anche come devono essere trattati gli eventi di origine (aggregaizone o massimo dettaglio).\\
+Esistono due tipi di estrazione, la prima è tipicamente usata per la popolazione iniziale:
+1. *Statica:* vengono prelevati tutti i dati presenti nella sorgente.
+2. *Dinamica:* vengono estratti solo i dati modificati o prodotti alla fonte.
+   + L'estrazione avviene in modo automatico, guidata da apposite funzioni trigger.
+   + L'estrazione avviene in modo periodico, tipica delle PMI.
+   + Viene fatto un confronto diretto con la sorgente.
+Spesso i dati estratti non vengono subito scritti nel DWH ma messi nella staging area per essere modificati.
+**** Integrazione e trasformazione
+Prima di essere scritti i dati devono essere resi omogenei.
++ *Riconciliazione:* i dati che riguardano lo stesso soggetto ma provengono da fonti diverse sono messi in relazione.
++ *Riconoscimento dei duplicati*.
++ *Trasformazione dei valori continui:* vengono parametrizzati in valori discreti.
++ *Standardizzazione dei formati*.
+**** Pulizia
+Questa fase può essere fatta anche prima dell'integrazione ma anche in modo parallelo ad essa.\\
+Devono essere eseguite analisi per rilevare, possibilmente anche riparare, le incorrette presenti nei dati.
++ *Dati incompleti:* si può inserire un codice per indicare la mancanza del dato, oppure nei sistemi più complessi si fanno inferenze sugli altri dati per ricavare quello mancante.
++ *Dati errati o incomprensibili:* vengono confrontati con dizionari di dati o valori limite, per stabilire la loro ammissibilità.
++ *Dati inconsistenti:* vengono applicate delle regole per inferire quale risultato sia corretto.
+**** Caricamento dei dati
+Questa è la fase in cui i dati vengono effettivamente caricati nel DWH, l'aggiornamento avviene dalle dimensioni verso i fatti con l'applicazione delle politiche di aggiornamento agli elementi già esistenti.
++ Non fare nulla, ogni fatto usa gli attributi dimensionali validi all'inserimento della dimansione.
++ Aggiornare l'elemento sovrascrivendolo.
++ Creare una nuova istanza che verrà associata ai nuovi fatti che verranno inseriti.
++ Creare una nuova istanza con marcatori temporali.
+** Tecniche di analisi dei dati
+L'analisi OLAP è la principale modalità di interrogazione interattiva del warehouse.\\
+Il paradigma che si usa è quello dell'esplorazione guidata da ipotesi, l'utente formula un'ipotesi e inoltra la richiesta per verificarla.\\
+Durante le interrogazioni viene costruita una sessione di analisi, ciascun passo diventa conseguenza dei risultati precedentemente ottenuti.\\
+Ogni passaggio di navigazione è costituito da un operatore OLAP, se non diversamente detto viene applicato all'ultimo risultato ottenuto.
+*** Drill down
+Permette di partire da un livello generale e approfondire i dettagli passo passo, si scende lungo una gerarchia o aggiungendo una dimensione di analisi.
+
+[[file:../img/drill_down.png]]
+
+*** Roll up
+E' il reciproco del drill down, si procede risalendo una gerarchia oppure eliminando una dimensione di analisi.
+
+[[file:../img/roll_up.png]]
+
+*** Slice
+Viene fissato il valore di una dimensione e vengono analizzati i dati così ottenuti.
+
+[[file:../img/slice.png]]
+
+*** Dice
+Simile allo slice ma può operare su più dimensioni fissandone il valore, si può applicare a dimensioni di qualsiasi livello.
+
+[[file:../img/dice.png]]
+
+*** Pivot
+(Trasposizione di matrice nel caso 2D) Le dimensioni della matrice vengono invertite.
+
+[[file:../img/pivot.png]]
