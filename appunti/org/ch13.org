@@ -51,3 +51,37 @@ Prevediamo degli evnti futuri oppure facciamo delle inferenze su dei valori manc
 + *Classificazione:* definiamo i criteri che permettono di assegnare un soggetto ad una classe.
 + *Predizione:* calcolo di funzionui di tendenza interpolando dati noti.
 *** Classificazione
+Specifica quali sono le classi obbiettivo della classificazione, quali sono i dati su cui costruire il modello e a quale classe appartengono.\\
+Le tecniche per costruire i classificatori sono diverse:
++ Funzioni matematiche
++ Regole associative
++ Alberi decisionali
++ Reti della verità bayesiane
++ Reti neurali
+**** Alberi decisionali
+Un albero di decisioe è una struttura semi alberi in cui:
++ I nodi interni sono attributi del soggetto.
++ Gli archi in un uscita da un nodo sono i valori che l'attributo può avere.
++ Le foglie sono le classi.
+L'albero è di fatto una struttura /if-then-else/ che va letta dalla radice alle foglie.
+**** Predizione
+La predizione permette di prevedere (ma pensa un po') valori non ancora noti di un dominio continuo.\\
+La costruzione delle funzioni di tendenza avviene tramite interpolazione dei putni noti (regressione), esistono diversi modelli di regressione:
++ *Lineare semplice:* $Y = q + mX$
++ *Multilineare:* $Y = q + m_1X_1 + m_2X_2 + m_3X_3$
++ *Non lineare:* $Y = q + m_1X + m_2X^2 + m_3X^3$
+** Meccanismi di clustering
+I meccanismi di clustering, come i classificatori, ripartiscono i dati in classi differenti senza però conoscere le classi, solo sulle affinità che gli elementi hanno.\\
+Esistono diverse tecniche:
++ *Partizionamento:* l'utente indica quante classi esistono.
++ *Classificazione gerarchica:*
+  + Aggregativa quando iterativamente aggrego gli elemnti in base alle similitudini.
+  + Divisiva quando spezzo gli insiemi in sottoinsiemi di elementi caratterizzati.
++ *Valutazione della densità:* gli elementi vengono divisi in base alla loro posizione nell'iperpiano.
+*** Ricerca degli outlier
+I metodi di clustering hanno come effetto secondario l'identificazione degli outlier, ovvero degli elementi che si discostano dai raggruppamenti.\\
+L'analisi degli outlier è simile alla procedura di clustering ma si concentra sull'identificazione degli elementi he si discostano maggiormente.
+La ricerca si avvale di:
++ *Metodi statistici:* utilizzabili solo quando si conosce la distribuzione (statistica) dei dati.
++ *Metodi basati sulla distanza:* ricerca degli elementi con distanza maggiore.
++ *Metodi basati sulla deviazione:* ricerca di elementi che diavo dal gruppo.
