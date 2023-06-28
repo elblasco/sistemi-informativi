@@ -1,0 +1,17 @@
+#+TITLE: Sistemi Informativi
+#+AUTHOR: Alessio Blascovich
+#+EMAIL: alessio.blascovich@tudenti.unitn.it
+#+LANGUAGE: it
+#+INCLUDE: "ch00.org"
+#+INCLUDE: "ch01.org"
+#+INCLUDE: "ch02.org"
+#+INCLUDE: "ch03.org"
+#+INCLUDE: "ch04.org"
+#+INCLUDE: "ch05.org"
+#+INCLUDE: "ch06.org"
+#+INCLUDE: "ch07.org"
+#+INCLUDE: "ch08.org"
+#+INCLUDE: "ch09.org"
+#+INCLUDE: "ch11.org"
+#+INCLUDE: "ch12.org"
+#+INCLUDE: "ch13.org"
